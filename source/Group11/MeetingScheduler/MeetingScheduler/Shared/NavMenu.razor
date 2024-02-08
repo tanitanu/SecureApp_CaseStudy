@@ -1,0 +1,63 @@
+﻿@using Utilities;
+@inject ILocalStorage LocalStorage
+<div class="top-row ps-3 navbar navbar-dark">
+<div class="container-fluid">
+<a class="navbar-brand" href="">MeetingScheduler</a>
+<button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+<span class="navbar-toggler-icon"></span>
+</button>
+</div>
+</div>
+ 
+<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
+<nav class="flex-column">
+<div class="nav-item px-3">
+<NavLink class="nav-link" href="dashboard" Match="NavLinkMatch.All">
+<span class="oi oi-home" aria-hidden="true"></span> Dashboard
+</NavLink>
+</div>
+<div class="nav-item px-3">
+<NavLink class="nav-link" href="createmeeting">
+<span class="oi oi-plus" aria-hidden="true"></span> Meetings
+</NavLink>
+</div>
+<div class="nav-item px-3">
+            <NavLink class="nav-link" href="meetingreport">
+<span class="oi oi-list-rich" aria-hidden="true"></span> Report
+</NavLink>
+</div>
+        @if(IsAdminUser){
+<div class="nav-item px-3">
+<NavLink class="nav-link" href="/Admin">
+<span class="oi oi-people" aria-hidden="true"></span> Admin
+</NavLink>
+</div>
+        }
+</nav>
+</div>
+ 
+@code {
+    private bool collapseNavMenu = true;
+    private bool IsAdminUser = false;
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    /// <summary>
+    /// To Toggle Navigation Menu
+    /// </summary>
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+    /// <summary>
+    /// On Initialized Async
+    /// </summary>
+    /// <returns></returns>
+    protected async override Task OnInitializedAsync()
+    {
+        string rolename = await LocalStorage.GetStringAsync("rolename");
+        if(rolename.ToLower().Trim() == "admin")
+        {
+            IsAdminUser = true;
+        }
+    }
+}

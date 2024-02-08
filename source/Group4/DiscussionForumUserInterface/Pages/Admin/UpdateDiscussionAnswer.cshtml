@@ -1,0 +1,81 @@
+﻿@page
+@model DiscussionForumUserInterface.Pages.Admin.UpdateDiscussionAnswerModel
+@{
+    Layout = "_AdminLayout";
+}
+<partial name="_Notification" />
+<body>
+    <div class="question-container">
+        <div class="question-text">@Model.UpdateDiscussionAnswer.CategoryName</div>
+        <div class="question-text">@Model.UpdateDiscussionAnswer.Title</div>
+        <div class="question-content">@Html.Raw(Model.UpdateDiscussionAnswer.Content)</div>
+        <div class="question-details">
+
+            <div class="status-details">
+
+                <span class="status-icon"> @Model.UpdateDiscussionAnswer.Status</span>
+
+            </div>
+
+            <div class="likes-dislikes">
+
+                <span class="likes-icon" style='color: #3498DB;'><i class='fas fa-thumbs-up'></i></span>
+
+                <span> @Model.UpdateDiscussionAnswer.LikeCount</span>
+                &nbsp;
+                <span class="dislikes-icon" style='color: #CD6155;'><i class='fas fa-thumbs-down'></i></span>
+
+                <span> @Model.UpdateDiscussionAnswer.DislikeCount</span>
+
+            </div>
+
+        </div>
+
+        <div class="created-date">
+
+            Created Date: @Model.UpdateDiscussionAnswer.QuestionDateCreation <br />
+            Created By: @Model.UpdateDiscussionAnswer.QuestionCreatedByName
+
+        </div>
+
+    </div>
+    <form method="post">
+        <div class="answer-container">
+            <div class="form-group required">
+            <label class="control-label">Answer</label>
+            <textarea id="body" class="form-control" asp-for="@Model.UpdateDiscussionAnswer.Answer"></textarea>
+            @Html.HiddenFor(m => m.UpdateDiscussionAnswer.QuestionId)
+            @Html.HiddenFor(m => m.UpdateDiscussionAnswer.AnswerID)
+            <div class="form-group buttons">
+                <button type="submit" class="btn btn-success">Update</button>
+                <button type="button" class="btn btn-danger" onclick="window.location.href ='/Admin/Discussion?QuestionId=@Model.UpdateDiscussionAnswer.QuestionId'">Cancel</button>
+            </div>
+            </div>
+        </div>
+
+    </form>
+</body>
+<link rel="stylesheet" href="~/css/discussion.css" />
+@section Scripts{
+    <script>
+        tinymce.init({
+            selector: 'textarea#body',
+            width: 700,
+            height: 300,
+            plugins: [
+                'advlist', 'lists', 'charmap', 'preview',
+                'anchor', 'pagebreak',
+                'searchreplace', 'wordcount', 'visualblocks', 'visualchars', 'code',
+                'insertdatetime',
+                'emoticons'
+            ],
+            toolbar: ['undo redo | styles | bold italic | alignleft aligncenter alignright alignjustify | ' +
+                'bullist numlist outdent indent | print preview media | ' +
+                'forecolor backcolor emoticons'],
+            promotion: false,
+            forced_root_block: ' ',
+            branding: false,
+            menubar: 'favs file edit view format tools',
+        });
+    </script>
+    }

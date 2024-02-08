@@ -1,0 +1,142 @@
+﻿@page
+@model BlazorCARS.HealthShield.WebApp.Pages.hospital.EditHospitalModel
+@{
+    ViewData["Title"] = "Edit Profile";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <form method="post" asp-page-handler="OnPostAsync">
+            <div class="row pb-2">
+                <h2 class="text-primary pl-3">@ViewData["Title"]</h2>
+                <hr />
+            </div>
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <input asp-for="@Model.Hospital.HospitalId" hidden />
+            <input asp-for="@Model.Hospital.LicenseNo" hidden />
+
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="Hospital.Name"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Hospital.Name" />
+                    <span asp-validation-for="@Model.Hospital.Name" class="text-danger"></span>
+                </div>
+                <div class="col-2">
+                    <label class="control-label" asp-for="Hospital.LicenseNo"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Hospital.LicenseNo" disabled />
+                    <span asp-validation-for="@Model.Hospital.LicenseNo" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="Hospital.Discrimination"></label>
+                </div>
+                <div class="col-4">
+                    <select asp-for="@Model.Hospital.Discrimination">
+                        <option value="Hospital">Hospital</option>
+                        <option value="Clinic">Clinic</option>
+                    </select>
+                    <span asp-validation-for="@Model.Hospital.Discrimination" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="Hospital.Address1"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Hospital.Address1" />
+                    <span asp-validation-for="@Model.Hospital.Address1" class="text-danger"></span>
+                </div>
+                <div class="col-2">
+                    <label class="control-label" asp-for="Hospital.Address2"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Hospital.Address2" />
+                    <span asp-validation-for="@Model.Hospital.Address2" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="Hospital.City"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Hospital.City" />
+                    <span asp-validation-for="@Model.Hospital.City" class="text-danger"></span>
+                </div>
+                <div class="col-2">
+                    <label class="control-label" asp-for="Hospital.CountryId"></label>
+                </div>
+                <div class="col-4">
+                    <select width="500px" asp-for="@Model.Hospital.CountryId" asp-items="@Model.CountryOptions">
+                        <option value="">Choose a country</option>
+                    </select>
+                    <span asp-validation-for="@Model.Hospital.CountryId" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="Hospital.StateId"></label>
+                </div>
+                <div class="col-4">
+                    <select asp-for="@Model.Hospital.StateId" asp-items="@Model.StateOptions">
+                        <option value="">Choose a State</option>
+                    </select>
+                    <span asp-validation-for="@Model.Hospital.StateId" class="text-danger"></span>
+                </div>
+                <div class="col-2">
+                    <label class="control-label" asp-for="Hospital.PostalCode"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Hospital.PostalCode" />
+                    <span asp-validation-for="@Model.Hospital.PostalCode" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="Hospital.PrimaryContact"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Hospital.PrimaryContact" />
+                    <span asp-validation-for="@Model.Hospital.PrimaryContact" class="text-danger"></span>
+                </div>
+                <div class="col-2">
+                    <label class="control-label" asp-for="Hospital.SecondaryContact"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Hospital.SecondaryContact" />
+                    <span asp-validation-for="@Model.Hospital.SecondaryContact" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="Hospital.EmergencyContact"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Hospital.EmergencyContact" />
+                    <span asp-validation-for="@Model.Hospital.EmergencyContact" class="text-danger"></span>
+                </div>
+                <div class="col-2">
+                    <label class="control-label" asp-for="Hospital.EmailId"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Hospital.EmailId" />
+                    <span asp-validation-for="@Model.Hospital.EmailId" class="text-danger"></span>
+                </div>
+            </div>
+            <br />
+            <div class="row pb-3">
+                <div class="col-3 offset-6">
+                    <button type="submit" class="form-control btn btn-primary" asp-page-handler="OnPostAsync"><i class="bi bi-floppy2-fill"></i>&nbsp;Save</button>
+                </div>
+                <div class="col-3">
+                    <a class="form-control btn btn-secondary text-white" asp-page="/Hospital/ViewHospital"><i class="bi bi-arrow-left-circle-fill"></i>&nbsp;Back</a>
+                </div>
+            </div>
+            <br />
+        </form>
+    </div>
+</div>

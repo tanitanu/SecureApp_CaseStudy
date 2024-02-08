@@ -1,0 +1,114 @@
+﻿@using MeetingScheduler.Authentication;
+@using MeetingScheduler.Data;
+@using MeetingScheduler.Entities;
+@using Utilities;
+@inject NavigationManager NavigationManager
+@inject ILocalStorage LocalStorage
+@inherits LayoutComponentBase
+@inject ILoginService Login
+@inject AuthenticationStateProvider AuthenticationStateProviders
+
+<PageTitle>MeetingScheduler</PageTitle>
+
+
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+   
+    <div class="container">
+    <div class="row">     
+      
+             @if (loggedIn)
+            {
+                <div class="col-sm-3" style="background-color:darkgreen;"></div>
+                <div class="col-sm-3" style="background-color:darkgreen;">
+                </div>
+
+                <div class="col-sm-4" style="background-color:darkgreen;">
+                    <span style="color:white">Welcome : @userName (@rolename)</span>
+                    </div>
+                <div class="col-sm-2" style="background-color:darkgreen;">
+                    <button class="btn btn-sm btn-danger" title="Logout" @onclick="Logout">
+                        <span class="oi oi-account-logout">&nbsp;&nbsp;Logout</span></button>                    
+                </div>
+                              
+            }
+       
+            
+</div>
+
+
+        <article class="content px-4">
+            @Body
+        </article>
+   
+</div>
+</div>
+@code {
+    public string LoginMesssage { get; set; }
+
+    private bool loggedIn;
+    private string? user;
+    private string? userName;
+    private string? rolename;
+
+    public string? GetUserName()
+    {
+        return loggedIn ? user : null;
+    }
+
+    /// <summary>
+    /// Meeting scheduler Logout
+    /// </summary>
+    /// <returns></returns>
+    public async Task Logout()
+    {
+        user = null;
+        loggedIn = false;
+        await LocalStorage.RemoveAsync("user");
+        await LocalStorage.RemoveAsync("username");
+        await LocalStorage.RemoveAsync("userId");
+        await LocalStorage.RemoveAsync("rolename");
+        NavigationManager.NavigateTo("/");
+    }
+
+    /// <summary>
+    /// On Initialized Async
+    /// </summary>
+    /// <returns></returns>
+    protected async override Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        user = await LocalStorage.GetStringAsync("user");
+        loggedIn = !string.IsNullOrEmpty(user);
+
+        userName = await LocalStorage.GetStringAsync("username");
+        rolename = await LocalStorage.GetStringAsync("rolename");
+
+
+
+        if (string.IsNullOrWhiteSpace(user))
+        {
+            NavigationManager.NavigateTo("/");
+        }
+    }
+
+    /// <summary>
+    /// Logout Meeting scheduler application
+    /// </summary>
+    /// <returns></returns>
+    private async Task LogoutApp()
+        {
+            try
+            {
+                ((CustomAuthenticationStateprovider)AuthenticationStateProviders).MarkUserAsAuthenticated(null, null);
+                NavigationManager.NavigateTo("/login");
+
+            }
+            catch (Exception ex)
+            {
+                // _logger.LogError(ex.ToString());
+            }
+        }
+}

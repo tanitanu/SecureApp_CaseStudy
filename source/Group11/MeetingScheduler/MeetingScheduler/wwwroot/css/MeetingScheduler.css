@@ -1,0 +1,33 @@
+﻿body {
+}
+.fieldset {
+    max-width: 80%;   
+    border-block:2px,solid,#ff6a00;
+}
+
+.legend {
+    background:#b6ff00;
+    color: #fff;    
+    font-size: 25px;
+    border-radius: 5px;
+    border-block-color:indianred;
+    box-shadow: 0 0 0 5px #b200ff;
+    margin-left: 20px;
+}
+.hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;    
+    border-width: 1px;
+    color:green;
+}
+th:nth-child(odd) {
+    color: white;
+    background-color: purple;    
+}
+th:nth-child(even) {
+    color: white;
+    background-color: purple;  
+}

@@ -1,0 +1,95 @@
+﻿@page
+@using NonFactors.Mvc.Grid;
+@model DiscussionForumUserInterface.Pages.Admin.ReportModel
+@{
+    Layout = "_AdminLayout";
+}
+<div class="_container">
+    <header>
+        <h2 class="main-header">Report</h2>
+    </header>
+    <partial name="_Notification" />
+    <form method="post">
+        <label id="dropdown1">By Status<span style="color:red">*</span></label>
+        <select id="dropdown1" onchange="ResetValues()" asp-for="ReportAdminModel.Status" required>
+            <option value="" selected disabled>--Select--</option>
+            <option value="Close">Closed Discussions</option>
+            <option value="Open">Long Pending Discussions</option>
+            <option value="Top">Top Contributor</option>
+        </select>
+        &ensp;
+        <label id="dropdown2">By Type<span style="color:red">*</span></label>
+        <select id="filterdd" onchange="yearMonWeekPicker()" asp-for="ReportAdminModel.Type" required>
+            <option value="" selected disabled>--Select--</option>
+            <option value="Year">Year</option>
+            <option value="Month">Month</option>
+            <option value="Week">Week</option>
+        </select>
+        &ensp;
+        <input type="text" id="yearpicker" asp-for="ReportAdminModel.FromYearDate" />
+        <input type="text" id="monthpicker" asp-for="ReportAdminModel.FromMonthDate" />
+            <input type="text" id="datepicker" onchange="getWeek()" asp-for="ReportAdminModel.FromWeekDate" />
+            <input type="text" id="endDate" asp-for="ReportAdminModel.ToDate" readonly>
+        &nbsp;
+        <button type="submit" id="reportGo" class="btn btn-success">Go</button>
+    </form>
+    @if (Model.ReportDetails != null)
+    {
+
+        @(Html.Grid(Model.ReportDetails).Build(columns =>
+            {
+                columns.Add().RenderedAs((model, row) => row + 1).Titled("#").Css("text-center");
+                columns.Add(model => model.Title).Titled("Discussion").Width("40%").Encoded(false).Filterable(GridFilterCase.Lower);
+                columns.Add(model => model.CategoryName).Titled("Category").Width("10%").Filterable(GridFilterCase.Lower);
+                columns.Add(model => model.Status).Titled("Status").Filterable(GridFilterCase.Lower).Width("10%").
+                RenderedAs(model => model.Status == "Open" ? "<span style= 'color:#008000'>" + model.Status + "</span>" :
+                "<span style= 'color:#D2042D'>" + model.Status + "</span>").Encoded(false);
+                columns.Add(model => model.CreatedByName).Titled("Name").Width("10%").Filterable(GridFilterCase.Lower);
+                columns.Add(model => model.DateCreation).Titled("Created On").Filterable(GridFilterCase.Lower).Width("20%");
+                columns.Add(model => $"<span style='color: #3498DB;'><i class ='fas fa-thumbs-up'>&nbsp;{model.LikeCount}</i></span>").Width("5%").Encoded(false);
+                columns.Add(model => $"<span style='color: #CD6155;'><i class ='fas fa-thumbs-down'>&nbsp;{model.DislikeCount}</i></span>").Width("5%").Encoded(false);
+            }).Empty("No data found")
+            .Filterable()
+            .Sortable()
+            .Pageable(pager =>
+            {
+                pager.PagesToDisplay = @Model.ReportDetails.Count() / 10 <= 1 ? 1 : @Model.ReportDetails.Count();
+                pager.CurrentPage = 1;
+                pager.RowsPerPage = 10;
+            })
+
+            )
+    }
+    else if (Model.TopContributors != null)
+    {
+        @(
+            Html.Grid(Model.TopContributors).Build(columns =>
+            {
+                columns.Add().RenderedAs((model, row) => row + 1).Titled("#").Css("text-center");
+                columns.Add(model => model.userName).Titled("Name").Width("40%").Encoded(false).Filterable(GridFilterCase.Lower);
+                columns.Add(model => model.answerCount).Titled("Contribution Count").Width("10%").Filterable(GridFilterCase.Lower);
+            }).Empty("No data found")
+            .Filterable()
+            .Sortable()
+            .Pageable(pager =>
+            {
+                pager.PagesToDisplay = @Model.TopContributors.Count() / 10 <= 1 ? 1 : @Model.TopContributors.Count();
+                pager.CurrentPage = 1;
+                pager.RowsPerPage = 10;
+            })
+
+            )
+    }
+
+
+
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css" rel="stylesheet" />
+<link rel="stylesheet" href="~/css/report.css" />
+<script src="~/js/report.js"></script>
+
+
+

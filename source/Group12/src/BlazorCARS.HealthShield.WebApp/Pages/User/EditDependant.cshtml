@@ -1,0 +1,116 @@
+﻿@page
+@model BlazorCARS.HealthShield.WebApp.Pages.User.EditDependantModel
+@{
+    ViewData["Title"] = "Edit Dependant";
+}
+<div class="container-fluid">
+    <div class="row">
+        <form method="post" asp-page-handler="OnPostAsync">
+            <div class="row pb-2">
+                <h2 class="text-primary pl-3">@ViewData["Title"]</h2>
+                <hr />
+            </div>
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <input asp-for="@Model.Recipient.RecipientId" hidden />
+            <input asp-for="@Model.Recipient.DependentRecipientId" hidden />
+            <input asp-for="@Model.Recipient.UpdatedUser" hidden />
+            <input asp-for="@Model.Token" hidden />
+            <input asp-for="@Model.Recipient.AadhaarNo" hidden />
+
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="Recipient.FirstName"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Recipient.FirstName" />
+                    <span asp-validation-for="@Model.Recipient.FirstName" class="text-danger"></span>
+                </div>
+                <div class="col-2">
+                    <label class="control-label" asp-for="Recipient.LastName"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Recipient.LastName" />
+                    <span asp-validation-for="@Model.Recipient.LastName" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="Recipient.AadhaarNo"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Recipient.AadhaarNo" disabled />
+                </div>
+                <div class="col-2">
+                    <label class="control-label" asp-for="Recipient.DOB"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Recipient.DOB" />
+                    <span asp-validation-for="@Model.Recipient.DOB" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="Recipient.PrimaryContact"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Recipient.PrimaryContact" />
+                    <span asp-validation-for="@Model.Recipient.PrimaryContact" class="text-danger"></span>
+                </div>
+                <div class="col-2">
+                    <label class="control-label" asp-for="Recipient.SecondaryContact"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Recipient.SecondaryContact" />
+                    <span asp-validation-for="@Model.Recipient.SecondaryContact" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="Recipient.EmergencyContact"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Recipient.EmergencyContact" />
+                    <span asp-validation-for="@Model.Recipient.EmergencyContact" class="text-danger"></span>
+                </div>
+                <div class="col-2">
+                    <label class="control-label" asp-for="Recipient.EmailId"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Recipient.EmailId" />
+                    <span asp-validation-for="@Model.Recipient.EmailId" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="Recipient.RelationshipType"></label>
+                </div>
+                <div class="col-4">
+                    <select class="form-control" asp-for="@Model.Recipient.RelationshipType">
+                        <option value="">Choose a relationship</option>
+                        <option value="Father">Father</option>
+                        <option value="Mother">Mother</option>
+                        <option value="Son">Son</option>
+                        <option value="Daughter">Daughter</option>
+                        <option value="Spouse">Spouse</option>
+                    </select>
+                    <span asp-validation-for="@Model.Recipient.RelationshipType" class="text-danger"></span>
+                </div>
+            </div>
+            <br />
+            <div class="row pb-3">
+                <div class="col-2 offset-8">
+                    <button type="submit" class="form-control btn btn-primary" ><i class="bi bi-floppy2-fill"></i>&nbsp;Save</button>
+                </div>
+                 <div class="col-2">
+                    <a class="form-control btn btn-secondary" text-white" asp-page="/User/DependantList"><i class="bi bi-arrow-left-circle-fill"></i>&nbsp;Back</a>
+                </div>
+            </div>
+            <br />
+        </form>
+    </div>
+</div>
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

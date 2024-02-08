@@ -1,0 +1,91 @@
+﻿@page
+@using NonFactors.Mvc.Grid;
+@model DiscussionForumUserInterface.Pages.Admin.DiscussionsModel
+@{
+    Layout = "_AdminLayout";
+}
+<div style="float: right;margin-top: 1rem;">
+    <button type="button" class="btn btn-primary" onclick="window.location.href = '/Admin/CreateDiscussion'">
+        Create Discussion
+    </button>
+</div>
+<partial name="_Notification" />
+@(Html.Grid(Model.QuestionDetails).Build(columns =>
+    {
+        columns.Add().RenderedAs((model, row) => row + 1).Titled("#").Css("text-center");
+        columns.Add(model => model.Title).Titled("Discussion").Filterable(GridFilterCase.Lower).Width("40%").
+       RenderedAs(model => $"<a href='/Admin/Discussion?QuestionId={model.QuestionId}'>{model.Title}</a>").Encoded(false);
+        columns.Add(model => model.CategoryName).Titled("Category").Width("10%").Filterable(GridFilterCase.Lower);
+        columns.Add(model => model.Status).Titled("Status").Filterable(GridFilterCase.Lower).Width("10%").
+        RenderedAs(model => model.Status == "Open" ? "<span style= 'color:#008000'>" + model.Status + "</span>" :
+        "<span style= 'color:#D2042D'>" + model.Status + "</span>").Encoded(false);
+        columns.Add(model => model.CreatedByName).Titled("Name").Width("10%").Filterable(GridFilterCase.Lower);
+        columns.Add(model => model.DateCreation).Titled("Created On").Filterable(GridFilterCase.Lower).Width("20%");
+        columns.Add(model => $"<span style='color: #3498DB;'><i class ='fas fa-thumbs-up'>&nbsp;{model.LikeCount}</i></span>").Width("5%").Encoded(false);
+        columns.Add(model => $"<span style='color: #CD6155;'><i class ='fas fa-thumbs-down'>&nbsp;{model.DislikeCount}</i></span>").Width("5%").Encoded(false);
+        columns.Add(model => model.Status == "Open" && model.Delete == false ? $"<a href='/Admin/UpdateDiscussion?QuestionId={model.QuestionId}'><i class = 'fas fa-pen'></i></a>" : $"<i class = 'fas fa-pen'></i>").Width("5%").Encoded(false);
+        columns.Add(model => model.Status == "Open" && model.Delete == false ? $"<a href='#' data-mdb-toggle='modal' data-mdb-target='#deleteModal'data-id='{model.QuestionId}'><i class = 'fas fa-trash-can'></i></a>" :
+        $"<i class = 'fas fa-trash-can'></i>")
+        .Width("5%").Encoded(false);
+        columns.Add(model => model.Status == "Open" && model.Delete == false ? $"<a href='#' data-mdb-toggle='modal' data-mdb-target='#statusModal'data-id='{model.QuestionId}'><i class = 'fas fa-arrows-rotate'></i></a>" : $"<i class = 'fas fa-arrows-rotate'></i>").Width("5%").Encoded(false);
+    }).Empty("No data found")
+    .Filterable()
+    .Sortable()
+    .Pageable(pager =>
+    {
+        pager.PagesToDisplay = @Model.QuestionDetails.Count() / 10 <= 1 ? 1 : @Model.QuestionDetails.Count();
+        pager.CurrentPage = 1;
+        pager.RowsPerPage = 10;
+    })
+
+)
+<form method="post">
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title" id="deleteModalLabel">Delete Discussion</h6>
+                    <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to delete?</p>
+                    @Html.Hidden("questionId")
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">No</button>
+                    <button type="submit" class="btn btn-primary" asp-page-handler="DeleteDiscussion">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<form method="post">
+    <div class="modal fade" id="statusModal" tabindex="-1" aria-labelledby="statusModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title" id="statusModalLabel">Status Discussion</h6>
+                    <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to change the status?</p>
+                    @Html.Hidden("questionId")
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">No</button>
+                    <button type="submit" class="btn btn-primary" asp-page-handler="StatusDiscussion">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('a[data-mdb-toggle=modal]').click(function () {
+            $(".modal-body #questionId").val($(this).data('id'));
+        })
+    });
+</script>

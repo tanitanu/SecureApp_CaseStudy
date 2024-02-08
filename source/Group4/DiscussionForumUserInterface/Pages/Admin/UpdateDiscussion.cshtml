@@ -1,0 +1,72 @@
+﻿@page
+@model DiscussionForumUserInterface.Pages.Admin.UpdateDiscussionModel
+@{
+    Layout = "_AdminLayout";
+}
+<div class="_container">
+    <header>
+        <h2 class="main-header">Update Discussion</h2>
+    </header>
+    <partial name="_Notification" />
+    <div class="row">
+        <form method="post">
+            <input type="hidden" asp-for="CreateUpdateDiscussionModel.QuestionId" />
+            <input type="hidden" asp-for="CreateUpdateDiscussionModel.Status" />
+            <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+            <div class="form-group required">
+                <label class="control-label">Category</label>
+                <select id="drpCatList" class="form-select" asp-for="CreateUpdateDiscussionModel.CategoryId" 
+                        asp-items="@Model.Categories">
+                    <option value="">--Select--</option>
+                </select>
+                <span class="text-danger" asp-validation-for="CreateUpdateDiscussionModel.CategoryId"></span>
+                <input type="hidden" asp-for="CreateUpdateDiscussionModel.CategoryId" />
+            </div>
+            <div class="form-group required">
+                <label class="control-label">Title</label>
+                <input type="text"
+                       class="form-control"
+                       asp-for="CreateUpdateDiscussionModel.Title"
+                       required />
+                <span class="text-danger" asp-validation-for="CreateUpdateDiscussionModel.Title"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Content</label>
+                <textarea id="body" asp-for="CreateUpdateDiscussionModel.Content" class="form-control"></textarea>
+                <span class="text-danger" asp-validation-for="CreateUpdateDiscussionModel.Content"></span>
+            </div>
+            <div class="form-group buttons">
+                <button type="submit" class="btn btn-success">Update</button>
+                <button type="button" class="btn btn-danger" onclick="window.location.href = '/Admin/Discussions'">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+    <script>
+        tinymce.init({
+            selector: 'textarea#body',
+            width: 700,
+            height: 300,
+            plugins: [
+                'advlist', 'lists', 'charmap', 'preview',
+                'anchor', 'pagebreak',
+                'searchreplace', 'wordcount', 'visualblocks', 'visualchars', 'code',
+                'insertdatetime',
+                'emoticons'
+            ],
+            toolbar: ['undo redo | styles | bold italic | alignleft aligncenter alignright alignjustify | ' +
+                'bullist numlist outdent indent | print preview media | ' +
+                'forecolor backcolor emoticons'],
+            promotion: false,
+            forced_root_block: ' ',
+            branding: false,
+            menubar: 'favs file edit view format tools',
+        });
+    </script>
+}

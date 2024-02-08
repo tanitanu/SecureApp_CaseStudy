@@ -1,0 +1,42 @@
+﻿@page
+@model BlazorCARS.HealthShield.WebApp.Pages.user.ListModel
+@{
+    ViewData["Title"] = "Users List";
+}
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">@ViewData["Title"]</h2>
+        </div>
+    </div>
+</div>
+<br /><br />
+<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Contact</th>
+            <th>Date of Birth</th>
+            <th>Address</th>
+            <th>State</th>
+            <th>Country</th>
+            <th>PinCode</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.RecipientList)
+        {
+            <tr>
+                <td>@string.Concat(item.FirstName, " ", item.LastName)</td>
+                <td>@item.PrimaryContact</td>
+                <td>@item.DOB.ToString("dd-MMM-yyyy")</td>
+                <td>@string.Concat(item.Address1, ", ", item.Address2, ", ", item.City)</td>
+                <td>@item.State</td>
+                <td>@item.Country</td>
+                <td>@item.PostalCode</td>
+            </tr>
+        }
+    </tbody>
+</table>
+@* </div> *@

@@ -1,0 +1,60 @@
+﻿@page
+@model BlazorCARS.HealthShield.WebApp.Pages.User.AddVaccineModel
+@{
+    ViewData["Title"] = "Add Vaccine";
+}
+<div class="container-fluid">
+    <div class="row">
+        <form method="post" asp-page-handler="OnPostAsync">
+            <div class="row pb-2">
+                <h2 class="text-primary pl-3">@ViewData["Title"]</h2>
+                <hr />
+            </div>
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="Vaccine.VaccinId"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Vaccine.VaccinId" />
+                    <span asp-validation-for="@Model.Vaccine.VaccinId" class="text-danger"></span>
+                </div>
+                <div class="col-2">
+                    <label class="control-label" asp-for="Vaccine.Name"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Vaccine.Name" />
+                    <span asp-validation-for="@Model.Vaccine.Name" class="text-danger"></span>
+                </div>
+            </div>
+           <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="Vaccine.Manufacturer"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Vaccine.Manufacturer" />
+                    <span asp-validation-for="@Model.Vaccine.Manufacturer" class="text-danger"></span>
+                </div>
+                <div class="col-2">
+                    <label class="control-label" asp-for="Vaccine.AgeGroup"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Vaccine.AgeGroup" />
+                    <span asp-validation-for="@Model.Vaccine.AgeGroup" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row pb-3">
+                <div class="col-2 offset-6">
+                    <button type="submit" class="form-control btn btn-primary" asp-page-handler="OnPostAsync"><i class="bi bi-floppy2-fill"></i>&nbsp;Save</button>
+                </div>
+                <div class="col-2">
+                    <button type="reset" class="form-control btn btn-secondary" asp-page-handler="OnPostAsync"><i class="bi bi-arrow-clockwise"></i>&nbsp;Reset</button>
+                </div>
+                <div class="col-2">
+                    <a class="form-control btn btn-secondary" text-white" asp-page="/Vaccine/List"><i class="bi bi-arrow-left-circle-fill"></i>&nbsp;Back</a>
+                </div>
+            </div>
+            <br />
+        </form>
+    </div>
+</div>

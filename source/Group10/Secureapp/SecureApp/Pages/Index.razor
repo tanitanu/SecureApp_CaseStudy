@@ -1,0 +1,43 @@
+﻿@* @page "/"
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Login</h5>
+                <p class="card-text">Already have an account?</p>
+                <NavLink href="/login" class="btn btn-primary">Login</NavLink>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Register</h5>
+                <p class="card-text">Don't have an account?</p>
+                <NavLink href="/registration" class="btn btn-success">Register</NavLink>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    
+}
+
+
+
+ *@
+
+@page "/"
+
+<PageTitle>Index</PageTitle>
+
+<h1>Hello, Users!</h1>
+
+Welcome to Secure App
+
+<img src="/css/secure.jpg" alt="" width="70px" height="50px">
+
+<SurveyPrompt Title="How is Blazor working for you?" />

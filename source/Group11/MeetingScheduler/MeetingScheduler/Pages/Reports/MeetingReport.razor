@@ -1,0 +1,131 @@
+﻿@page "/MeetingReport"
+@using MeetingScheduler.Data
+@using MeetingScheduler.Entities
+@using System.Globalization;
+@using Utilities;
+@inject ILoginService Login
+@inject IReportService reportService
+@inject IMeetingService meetingService
+@inject ILocalStorage LocalStorage
+@using Microsoft.JSInterop
+@using global::MeetingScheduler.Data;
+@inject IJSRuntime JSRuntime
+
+<PageTitle>Meeting Report</PageTitle>
+<!-- Main container for the meeting report page -->
+<div class="container">
+    <h1 class="mt-4">Meeting Report</h1>
+    <!-- Filter dropdown -->
+    <div class="form-group">
+        <label for="reportFilter">Filter:</label>
+        <select class="form-control" id="reportFilter" @onchange="FilterChanged">
+            <option value="Weekly">Weekly</option>
+            <option value="Monthly">Monthly</option>
+        </select>
+    </div>
+    <!-- Custom start date input for weekly filter -->
+    <div class="form-group" style="display: none;" id="weeklyStartDateInput">
+        <label for="startDate">Start Date:</label>
+        <input type="date" class="form-control" id="startDate" />
+    </div>
+    <!-- Custom month input for monthly filter -->
+    <div class="form-group" style="display: none;" id="monthlyMonthInput">
+        <label for="month">Month:</label>
+        <input type="month" class="form-control" id="month"  />
+    </div>
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered table-hover mt-4">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Email Address</th>
+                    <th>Subject</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>                    
+                    <th>Description</th>
+                    <th>Location</th>                    
+                    <th>Meeting Created By</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (meetings == null || meetings.Count==0)
+                {
+                    <p><em>No Meetings</em></p>
+                }
+                else
+                {
+                    @foreach (var meeting in meetings)
+                    {
+                        <tr>
+                            <td>@meeting.UserName</td>
+                            <td>@meeting.emailAddresses</td>
+                            <td>@meeting.Subject</td>
+                            <td>@meeting.StartTime</td>
+                            <td>@meeting.EndTime</td>
+                            <td>@meeting.Description</td>
+                            <td>@meeting.Location</td>                            
+                            <td>@meeting.LastUpdatedUserId</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@code {
+    /// <summary>
+    /// Variables and services injection
+    /// </summary>
+    string reportDate = DateTime.Now.ToString(new CultureInfo("en-US"));  
+    private List<MeetingDTO> meetings;
+    private int userId;
+    private string? rolename;
+    private string filterOption = "Weekly";
+    private DateTime startDate = DateTime.Today;
+
+    /// <summary>
+    /// On Initialized Async
+    /// </summary>
+    /// <returns></returns>
+    protected async override Task OnInitializedAsync()
+    {
+        // Retrieve user information from local storage
+        string user = await LocalStorage.GetStringAsync("userId");
+        userId = string.IsNullOrEmpty(user)?0:Convert.ToInt32(user);
+        rolename = await LocalStorage.GetStringAsync("rolename");
+
+        DateTime currentDate = DateTime.Now.Date;
+        reportDate = currentDate.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
+        meetings = await reportService.GetWeeklyMeetings(userId, Convert.ToDateTime(reportDate), rolename);
+    }
+    /// <summary>
+    /// Handle filter change event
+    /// </summary>
+    /// <returns></returns>
+    private async Task FilterChanged(ChangeEventArgs e)
+    {
+        // Update filter option and apply the filter
+        filterOption = e.Value.ToString();        
+        await ApplyFilter();
+    }
+    // Apply the selected filter
+    private async Task ApplyFilter()
+    {
+        // Set the current date for the report
+        DateTime currentDate = DateTime.Now.Date;
+        reportDate = currentDate.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
+        // Get meetings based on the selected filter
+        if (filterOption == "Weekly")
+        {
+            meetings = await reportService.GetWeeklyMeetings(userId, Convert.ToDateTime(reportDate), rolename);
+        }
+        else if (filterOption == "Monthly")
+        {
+            meetings = await reportService.GetMonthlyMeetings(userId, Convert.ToDateTime(reportDate), rolename);
+        }        
+    }
+
+}
+
+

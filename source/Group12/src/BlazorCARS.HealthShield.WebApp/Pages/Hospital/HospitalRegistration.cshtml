@@ -1,0 +1,164 @@
+﻿@page
+@model BlazorCARS.HealthShield.WebApp.Pages.hospital.HospitalRegistrationModel
+@{
+    ViewData["Title"] = "Hospital Registration page";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <form method="post">
+            <div class="row pb-2">
+                <h2 class="pl-3" style="color:#08739C;">Hospital Registration</h2>
+                <hr />
+            </div>
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="HospitalCreate.UserName"></label>
+                </div>
+                <div class="col-10">
+                    <input class="form-control" autofocus asp-for="@Model.HospitalCreate.UserName" />
+                    <span asp-validation-for="@Model.HospitalCreate.UserName" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <label class="control-label" asp-for="HospitalCreate.Password"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" type="password" asp-for="@Model.HospitalCreate.Password" />
+                    <span asp-validation-for="@Model.HospitalCreate.Password" class="text-danger"></span>
+                </div>
+                <div class="col-2">
+                    <label class="control-label" asp-for="HospitalCreate.ConfirmPassword"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" type="password" asp-for="@Model.HospitalCreate.ConfirmPassword" />
+                    <span asp-validation-for="@Model.HospitalCreate.ConfirmPassword" class="text-danger"></span>
+                </div>
+            </div>
+            <hr />
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="HospitalCreate.Name"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.HospitalCreate.Name" />
+                    <span asp-validation-for="@Model.HospitalCreate.Name" class="text-danger"></span>
+                </div>
+                <div class="col-2">
+                    <label class="control-label" asp-for="HospitalCreate.LicenseNo"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.HospitalCreate.LicenseNo" />
+                    <span asp-validation-for="@Model.HospitalCreate.LicenseNo" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="HospitalCreate.Discrimination"></label>
+                </div>
+                <div class="col-4">
+                    <select asp-for="@Model.HospitalCreate.Discrimination">
+                        <option value="Hospital">Hospital</option>
+                        <option value="Clinic">Clinic</option>
+                    </select>
+                    <span asp-validation-for="@Model.HospitalCreate.Discrimination" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="HospitalCreate.Address1"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.HospitalCreate.Address1" />
+                    <span asp-validation-for="@Model.HospitalCreate.Address1" class="text-danger"></span>
+                </div>
+                <div class="col-2">
+                    <label class="control-label" asp-for="HospitalCreate.Address2"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.HospitalCreate.Address2" />
+                    <span asp-validation-for="@Model.HospitalCreate.Address2" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="HospitalCreate.City"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.HospitalCreate.City" />
+                    <span asp-validation-for="@Model.HospitalCreate.City" class="text-danger"></span>
+                </div>
+                <div class="col-2">
+                    <label class="control-label" asp-for="HospitalCreate.CountryId"></label>
+                </div>
+                <div class="col-4">
+                    <select width="500px" asp-for="@Model.HospitalCreate.CountryId" asp-items="@Model.CountryOptions">
+                        <option value="">Choose a country</option>
+                    </select>
+                    <span asp-validation-for="@Model.HospitalCreate.CountryId" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="HospitalCreate.StateId"></label>
+                </div>
+                <div class="col-4">
+                    <select asp-for="@Model.HospitalCreate.StateId" asp-items="@Model.StateOptions">
+                        <option value="">Choose a State</option>
+                    </select>
+                    <span asp-validation-for="@Model.HospitalCreate.StateId" class="text-danger"></span>
+                </div>
+                <div class="col-2">
+                    <label class="control-label" asp-for="HospitalCreate.PostalCode"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.HospitalCreate.PostalCode" />
+                    <span asp-validation-for="@Model.HospitalCreate.PostalCode" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="HospitalCreate.PrimaryContact"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.HospitalCreate.PrimaryContact" />
+                    <span asp-validation-for="@Model.HospitalCreate.PrimaryContact" class="text-danger"></span>
+                </div>
+                <div class="col-2">
+                    <label class="control-label" asp-for="HospitalCreate.SecondaryContact"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.HospitalCreate.SecondaryContact" />
+                    <span asp-validation-for="@Model.HospitalCreate.SecondaryContact" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="HospitalCreate.EmergencyContact"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.HospitalCreate.EmergencyContact" />
+                    <span asp-validation-for="@Model.HospitalCreate.EmergencyContact" class="text-danger"></span>
+                </div>
+                <div class="col-2">
+                    <label class="control-label" asp-for="HospitalCreate.EmailId"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.HospitalCreate.EmailId" />
+                    <span asp-validation-for="@Model.HospitalCreate.EmailId" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row pb-3">
+                <div class="col-2 offset-8">
+                    <button type="submit" class="form-control btn btn-primary" style="background-color:#08739C;"><i class="bi bi-floppy2-fill"></i>&nbsp;Save</button>
+                </div>
+                <div class="col-2">
+                    <button type="reset" class="form-control btn btn-secondary"><i class="bi bi-arrow-clockwise"></i>&nbsp;Reset</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

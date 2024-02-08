@@ -1,0 +1,62 @@
+﻿@page
+@model TaskManagement.WebApp.Pages.TaskMgmt.EditModel
+@{
+}
+<h1>Editing the Task</h1>
+
+<form method="post" enctype="multipart/form-data">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(Model => Model.Tasks.Title)
+            </dt>
+            <dd class="col-sm-10">
+                <input asp-for="Tasks.Title" class="form-control" />
+                <span asp-validation-for="Tasks.Title" class="text-danger"></span>
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(Model => Model.Tasks.Description)
+            </dt>
+            <dd class="col-sm-10">
+                <input asp-for="Tasks.Description" class="form-control" />
+                <span asp-validation-for="Tasks.Description" class="text-danger"></span>
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(Model => Model.Tasks.DueDate)
+            </dt>
+            <dd class="col-sm-10">
+                <input asp-for="Tasks.DueDate" class="form-control" />
+                <span asp-validation-for="Tasks.DueDate" class="text-danger"></span>
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(Model => Model.Tasks.AssignedTo)
+            </dt>
+            <dd class="col-sm-10">
+                <input asp-for="Tasks.AssignedTo" class="form-control" />
+                <span asp-validation-for="Tasks.AssignedTo" class="text-danger"></span>
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(Model => Model.Tasks.Comments)
+            </dt>
+            <dd class="col-sm-10">
+                <input asp-for="Tasks.Comments" class="form-control" />
+                <span asp-validation-for="Tasks.Comments" class="text-danger"></span>
+            </dd>
+
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(Model => Model.Tasks.Status)
+            </dt>
+            <dd class="col-sm-10">
+                <select asp-for="Tasks.StatusId" asp-items="Model.StatusList" class="form-select">
+                </select>
+            </dd>
+
+        </dl>
+    </div>
+    <div>
+        <button type="submit" class="btn btn-primary" style="width:150px;">Save</button>
+        <a asp-page="ViewList" class="btn btn-secondary" style="width:150px;"> Back to List</a>
+    </div>
+</form>

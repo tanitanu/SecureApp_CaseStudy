@@ -1,0 +1,146 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+/*Global Reset*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*Common borders and fonts for all pages*/
+body {
+    font-family: sans-serif;
+    border-top: #365d95 solid 10px;
+}
+
+.container {
+    width: 800px;
+    margin: 20px auto;
+}
+
+.main-header {
+    text-align: center;
+    background-color: #365d95;
+    color: #ffffff;
+    font-size: 70px;
+    /* text-transform: uppercase; */
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+/*Intro/Landing Page Styles*/
+.header-description {
+    text-transform: uppercase;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.long-description {
+    font-size: 20px;
+  /*  /text-transform: uppercase;*/
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.signup-header {
+    font-size: 30px;
+    margin-bottom: 6px;
+}
+
+.signup-description {
+    margin-bottom: 8px;
+    font-style: italic;
+}
+
+.signup-button {
+    display: block;
+    margin-bottom: 30px;
+    padding: 15px 15px;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #365d95;
+    border-radius: 10px;
+    border: none;
+}
+
+.signin-header {
+    font-size: 30px;
+    margin-bottom: 6px;
+}
+
+.signin-button {
+    display: block;
+    margin-bottom: 40px;
+    padding: 15px 15px;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #365d95;
+    border-radius: 10px;
+    border: none;
+}
+
+ul {
+    margin-left: 20px;
+    line-height: 1.5;
+    font-size: 20px;
+}
+
+.features {
+    font-size: 30px;
+}
+
+/*For giving margin for Logina and cancel button*/
+.buttons {
+    margin-top: 15px;
+}
+
+/* Registration Page Styles*/
+.signup {
+    font-size: 15px;
+    padding: 5px 10px;
+    background-color: #5cdb5c;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: none;
+}
+
+    .signup:hover {
+        background-color: #44b844;
+    }
+
+.terms {
+    line-height: 1;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+.form-group.required .control-label:after {
+    content: "*";
+    color: red;
+}

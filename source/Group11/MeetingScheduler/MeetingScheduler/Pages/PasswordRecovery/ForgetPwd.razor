@@ -1,0 +1,68 @@
+﻿@layout LoginLayout
+@page "/forgetPassword"
+@using MeetingScheduler.Data
+@using MeetingScheduler.Entities;
+@using Utilities;
+@using Serilog;
+@inject ILocalStorage LocalStorage
+@inject NavigationManager NavigationManager
+@inject ILoginService Login
+
+<div class="card mx-auto text-center" style="width: 300px; justify-content: center;">
+    <div class="card-header h5 text-white bg-primary">Password Recovery Email</div>
+    <div class="card-body px-5">
+        <p class="card-text py-2">
+            Enter your email address and we'll send you an email with instructions to reset your password.
+        </p>
+        <div class="form-outline">
+            <input type="email" class="form-control" id="Email" placeholder="email@example.com" autocomplete="off" required @bind-value="forgetPassword.Email" />
+        </div>
+        <br />
+        <button type="button" class="form-control w-100 btn btn-primary" @onclick="SendEmail">Submit</button>
+        <div class="d-flex justify-content-between mt-4">
+            <a class="" href="#">Login</a>
+            <a class="" href="#">Register</a>
+        </div>
+        <br />
+        <div class="card-text py-2" style="text-align:left; font-weight:bold;color:red">
+            <span class="col-12">@forgetmessage</span>
+        </div>
+        <br />
+    </div>
+</div>
+
+@code {
+    ForgetPassword forgetPassword = new ForgetPassword();
+    public string? forgetmessage { get; set; }
+
+    #region Messages
+    private const string SEND_EMAIL_ERR_MSG = "Some Error Ocurred!!";
+    #endregion
+
+    /// <summary>
+    /// Send forgot password email
+    /// </summary>
+    private void SendEmail()
+    {
+        try
+        {
+
+            var forgetResponse = Login.ForgotPassword(forgetPassword);
+            if (forgetResponse.IsSuccess)
+            {
+                NavigationManager.NavigateTo("/confirmationForgot");
+            }
+            else
+            {
+                forgetmessage = forgetResponse.Message;
+            }
+        }
+        catch (Exception ex)
+        {
+            forgetmessage = SEND_EMAIL_ERR_MSG;
+        }
+
+
+    }
+
+}

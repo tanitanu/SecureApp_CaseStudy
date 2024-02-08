@@ -1,0 +1,120 @@
+﻿@page
+@model BlazorCARS.HealthShield.WebApp.Pages.hospital.ViewHospitalModel
+@{
+    ViewData["Title"] = "View Profile";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <form method="post" asp-page-handler="OnPostAsync">
+            <div class="row pb-2">
+                <h2 class="text-primary pl-3">@ViewData["Title"]</h2>
+                <hr />
+            </div>
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="Hospital.Name"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Hospital.Name" disabled />
+                </div>
+                <div class="col-2">
+                    <label class="control-label" asp-for="Hospital.LicenseNo"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Hospital.LicenseNo" disabled />
+                </div>
+            </div>
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="Hospital.Discrimination"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Hospital.Discrimination" disabled />
+                </div>
+            </div>
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="Hospital.Address1"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Hospital.Address1" disabled />
+                </div>
+                <div class="col-2">
+                    <label class="control-label" asp-for="Hospital.Address2"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Hospital.Address2" disabled />
+                </div>
+            </div>
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="Hospital.City"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Hospital.City" disabled />
+                </div>
+                <div class="col-2">
+                    <label class="control-label" asp-for="Hospital.CountryId"></label>
+                </div>
+                <div class="col-4">
+                    <select width="500px" asp-for="@Model.Hospital.CountryId" asp-items="@Model.CountryOptions" disabled>
+                    </select>
+                </div>
+            </div>
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="Hospital.StateId"></label>
+                </div>
+                <div class="col-4">
+                    <select asp-for="@Model.Hospital.StateId" asp-items="@Model.StateOptions" disabled>
+                    </select>
+                </div>
+                <div class="col-2">
+                    <label class="control-label" asp-for="Hospital.PostalCode"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Hospital.PostalCode" disabled />
+                </div>
+            </div>
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="Hospital.PrimaryContact"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Hospital.PrimaryContact" disabled />
+                </div>
+                <div class="col-2">
+                    <label class="control-label" asp-for="Hospital.SecondaryContact"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Hospital.SecondaryContact" disabled />
+                </div>
+            </div>
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="Hospital.EmergencyContact"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Hospital.EmergencyContact" disabled />
+                </div>
+                <div class="col-2">
+                    <label class="control-label" asp-for="Hospital.EmailId"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Hospital.EmailId" disabled />
+                </div>
+            </div>
+            <br />
+            <div class="row pb-3">
+                <div class="col-2 offset-10">
+                    <a class="form-control btn btn-primary" asp-page="/Hospital/EditHospital"><i class="bi bi-floppy2-fill"></i>&nbsp;Edit</a>
+                </div>
+                @*                 <div class="col-3">
+                <button type="reset" class="form-control btn btn-secondary" asp-page-handler="OnPostAsync"><i class="bi bi-arrow-clockwise"></i>&nbsp;Reset</button>
+                </div> *@
+            </div>
+            <br />
+        </form>
+    </div>
+</div>

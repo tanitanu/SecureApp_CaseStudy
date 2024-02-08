@@ -1,0 +1,25 @@
+﻿@page
+@using NonFactors.Mvc.Grid;
+@model DiscussionForumUserInterface.Pages.Admin.UserReportedModel
+@{
+    Layout = "_AdminLayout";
+}
+@(Html.Grid(Model.usersReportedModel).Build(columns =>
+    {
+        columns.Add().RenderedAs((model, row) => row + 1).Titled("#").Css("text-center").Width("5%");
+        columns.Add(model => model.Title).Titled("Discussion").Filterable(GridFilterCase.Lower).Width("40%");
+        columns.Add(model => model.ReporterUserName).Titled("Reporter Name").Filterable(GridFilterCase.Lower).Width("20%");
+        columns.Add(model => model.ReporterUserEmail).Titled("Reporter Email").Width("20%").Filterable(GridFilterCase.Lower);
+        columns.Add(model => model.RespondentUserName).Titled("Respondent Name").Width("10%").Filterable(GridFilterCase.Lower);
+        columns.Add(model => model.RespondentUserEmail).Titled("Respondent Email").Width("10%").Filterable(GridFilterCase.Lower);
+    }).Empty("No data found")
+    .Filterable()
+    .Sortable()
+    .Pageable(pager =>
+    {
+        pager.PagesToDisplay = @Model.usersReportedModel.Count() / 10 <= 1 ? 1 : @Model.usersReportedModel.Count();
+        pager.CurrentPage = 1;
+        pager.RowsPerPage = 10;
+    })
+
+)

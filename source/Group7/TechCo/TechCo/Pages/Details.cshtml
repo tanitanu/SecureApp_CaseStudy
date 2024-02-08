@@ -1,0 +1,67 @@
+﻿@page
+@model TechCo.Pages.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-page="/Products">All</a></li>
+        <li class="breadcrumb-item"><a asp-page="/Products" asp-route-categoryid="@Model.Product.CategoryID">@Model.Product.Category.CategoryName</a></li>
+        <li class="breadcrumb-item active" aria-current="page">@Model.Product.ProductName</li>
+    </ol>
+</nav>
+
+<div class="row pt-3 mb-2">
+    <div class="col-lg-6">
+        <h3 class="mb-2 font-weight-bold text-warning">@Model.Product.ProductPrice DA</h3>
+        <h2>@Model.Product.ProductName</h2>
+        <div class="py-3">
+            <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
+                <i class="fas fa-money-bill-wave"></i> Buy Now
+            </button>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <component type="typeof(TechCo.Components.AddtoCartButton)" param-ItemID="@Model.Product.ID" render-mode="Server" />
+            }
+        </div>
+        <p>@Html.Raw(Model.Product.ProductDescription)</p>
+    </div>
+    <div class="col-lg-6">
+        <img class="w-100" src="~/image/@Model.Product.Thumbnail" />
+    </div>
+</div>
+<hr style="width:70%;align-self:center" class="m-5 mx-auto" />
+<div>
+    <div class="row p-2 px-3">
+        <h3>You May Also Want To See :</h3>
+        <div class="ml-auto">
+            <a class="btn btn-outline-danger" asp-page="/Products" asp-route-categoryid="@Model.Product.CategoryID">See All In @Model.Product.Category.CategoryName</a>
+        </div>
+    </div>
+    <div class="row">
+        @foreach (var item in Model.Recommended)
+        {
+            <div class="col-sm-3">
+                <div class="card border-0 rounded-0 shadow-sm h-100">
+                    <a asp-page="./Details" asp-route-id="@item.ID">
+                        <img src="~/image/@item.Thumbnail" class="card-img-top" alt="Product Image">
+                    </a>
+                    <div class="card-body p-2">
+                        <a asp-page="./Details" asp-route-id="@item.ID" class="btn p-0"><h5 class="card-title">@item.ProductName</h5></a>
+                    </div>
+                    <div class="card-footer border-0">
+                        <span>@item.ProductPrice DA</span>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+@section Scripts{
+    <script src="_framework/blazor.server.js"></script>
+}

@@ -1,0 +1,116 @@
+﻿@page
+
+@model BlazorCARS.HealthShield.WebApp.Pages.LoginModel
+@{
+    ViewData["Title"] = "Login page";
+}
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+          crossorigin="anonymous" />
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="container border">
+        <div class="row">
+            <div class="col-md-4">
+
+                <img src="@Url.Content("~/Images/HealthShieldLogo.png")" alt="Logo">
+
+                @*                <div id="slider1_container" style="display: none; position: relative; margin: 0 auto;">
+                <!-- Slides Container -->
+                <div u="slides" style="cursor: move; width: 600px; height: 400px;">
+                <div>
+                <img u="image" src="images/download (2).jpg" alt="Image 1" />
+                </div>
+                <div>
+                <img u="image" src="images/download (2).jpg" alt="Image 2" />
+                </div>
+                </div>
+                </div>
+                *@
+            </div>
+
+            <div class="col-md-8 ">
+                @* <div class="d-flex justify-content-center align-items-center">
+                <header>
+                <h2 class="main-header" style="color: cornflowerblue">Login</h2>
+                </header>
+                </div> *@
+                <div class="container-fluid">
+                    <div class="row">
+                        <form method="post" asp-page-handler="OnPostAsync">
+                            <div class="borderless p-2 mt-4">
+                                <div class="row" style="background-color:#08739C;">
+                                    <h4 class="text-primary pl-1 text-white pt-1">LOGIN</h4>
+                                    @* <hr /> *@
+                                </div>
+                                <div asp-validation-summary="All" class="text-danger"></div>
+                                <div class="row pb-3">
+                                    <div class="col-2 control-label">
+                                        <label class="col-md-3 control-label pb-2" for="userName">Username:</label>
+                                    </div>
+                                    <div class="col-10">
+                                        <input type="text" id="userName" autofocus class="form-control" asp-for="@Model.loginModel.UserName" required />
+                                        <span asp-validation-for="@Model.loginModel.UserName" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row pb-3">
+                                    <div class="col-2 control-label">
+                                        <label class="control-label pb-2" for="password">Password:</label>
+                                    </div>
+                                    <div class="col-10">
+                                        <input type="password" id="password" class="form-control" asp-for="@Model.loginModel.Password" required />
+                                        <span asp-validation-for="@Model.loginModel.Password" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2 offset-10">
+                                        <button type="submit" class="btn btn-primary form-control" style="background-color:#08739C;" asp-page-handler="OnPostAsync">Login</button>
+                                    </div>
+                                </div>
+@*                                 <div class="form-group required">
+                                    <label class="col-md-3 control-label pb-2" for="userName">Username:</label>
+                                    <div class="col-12">
+                                        <input type="text" id="userName" autofocus class="form-control" asp-for="@Model.loginModel.UserName" style="width: 400px;" required />
+                                        <span asp-validation-for="@Model.loginModel.UserName" class="text-danger"></span>
+                                    </div>
+                                </div> *@
+
+@*                                 <div class="form-group required">
+                                    <label class="control-label pb-2" for="password">Password:</label>
+                                    <input type="password" id="password" class="form-control" asp-for="@Model.loginModel.Password" style="width: 400px;" required />
+                                    <span asp-validation-for="@Model.loginModel.Password" class="text-danger"></span>
+                                </div> *@
+
+@*                                 <br />
+                                <div class="form-group buttons">
+                                    <button type="submit" class="btn btn-primary" asp-page-handler="OnPostAsync">Login</button>
+                                </div>
+                                <br /> *@
+@*                                 @if (TempData["Error"] != null)
+                                {
+                                    <div class="alert alert-danger" style="height:60px">
+                                        @foreach (var errorMessage in (List<string>)TempData["Error"])
+                                        {
+                                            <p>@errorMessage</p>
+                                        }
+                                    </div>
+                                } *@
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @* @if (!string.IsNullOrEmpty(ErrorMessage))
+    {
+    <p style="color: red;">@ErrorMessage</p>
+    } *@
+</body>

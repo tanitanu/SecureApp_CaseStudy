@@ -1,0 +1,222 @@
+﻿@page
+
+@model BlazorCARS.HealthShield.WebApp.Pages.user.VaccineRegisterModel
+@{
+    
+    
+    ViewData["Title"] = "Vaccine Registration";
+
+}
+<input type="hidden" id="uniqueScheduleDates" />
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  @*   <script>
+        function updateDatePicker() {
+            var jsDateArray = @Json.Serialize(Model.UniqueScheduleDates);
+            var hardcodedDates = jsDateArray.map(date => new Date(date));
+
+            // Reinitialize the datepicker with the updated schedule dates
+            $('#datepicker').datepicker({
+                beforeShowDay: function (date) {
+                    var currentDate = new Date();
+                    currentDate.setHours(0, 0, 0, 0); // Set time to midnight for accurate comparison
+                    var dateString = date.toISOString().slice(0, 10);
+
+                    // Check if the date is in the hardcodedDates and greater than the current date
+                    var isHighlighted = hardcodedDates.some(d => d.toISOString().slice(0, 10) === dateString && d > currentDate);
+
+                    return [isHighlighted];
+                }
+            });
+        }
+
+        // Call updateDatePicker when the page is ready
+        $(document).ready(function () {
+            updateDatePicker();
+        });
+    </script> *@
+}
+<div class="container-fluid">
+    <div class="row">
+        <form method="post" asp-page-handler="OnPostAsync">
+            <div class="row pb-2">
+                <h2 class="text-primary pl-3">@ViewData["Title"]</h2>
+                <hr />
+            </div>
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <input type="hidden" asp-for="VaccineRegistrationCreate.RecipientId" value="@Model.recipient" />
+            <input asp-for="@Model.VaccineRegistrationCreate.DependantRecipientId" hidden />
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="VaccineRegistrationCreate.RecipientId"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="VaccineRegistrationCreate.RecipientName" value="@Model.recipientName" readonly />
+                    <span asp-validation-for="VaccineRegistrationCreate.RecipientName" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="VaccineRegistrationCreate.Hospital"></label>
+                    
+                </div>
+                <div class="col-4">
+                    <select asp-for="@Model.VaccineRegistrationCreate.Hospital" class="form-control" asp-items="@Model.HospitalOptions">
+                        <option value="">Choose a Hospital</option>
+                    </select>
+                    <span asp-validation-for="@Model.VaccineRegistrationCreate.Hospital" class="text-danger"></span>
+                </div>
+                <div class="col-2">
+                    <label class="control-label" asp-for="VaccineRegistrationCreate.ScheduleDate"></label>
+                   
+                </div>
+                <div class="col-4">
+    <select id="dateDropdown" class="form-control" asp-for="@Model.VaccineRegistrationCreate.ScheduleDate" asp-items="@Model.UniqueScheduleDates.Select(date => new SelectListItem { Value = date.ToString("yyyy-MM-dd"), Text = date.ToString("MM/dd/yyyy") })">
+        <option value="">Choose a Scheduledate</option>
+    </select>
+    <span asp-validation-for="@Model.VaccineRegistrationCreate.ScheduleDate" class="text-danger"></span>
+</div>
+            </div>
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="VaccineRegistrationCreate.TimeSlot"></label>
+                    
+                </div>
+                <div class="col-4">
+                    <select id="timeSlotDropdown" class="form-control" asp-for="@Model.VaccineRegistrationCreate.TimeSlot">
+                        <option value="">Choose a Timeslot</option>
+                        @foreach (var timeSlot in Model.UniqueTimeslots)
+                        {
+                            <option value="@timeSlot">@timeSlot</option>
+                        }
+                    </select>
+                    <span asp-validation-for="@Model.VaccineRegistrationCreate.TimeSlot" class="text-danger"></span>
+                </div>
+                <div class="col-2">
+                    <label class="control-label" asp-for="VaccineRegistrationCreate.Dose"></label>
+                </div>
+                <div class="col-4">
+                    <select asp-for="VaccineRegistrationCreate.Dose" class="form-control" asp-items="Model.DoseOptions">
+                        <option value="">Choose a Dose</option>
+                    </select>
+                    <span asp-validation-for="@Model.VaccineRegistrationCreate.Dose" class="text-danger"></span>
+                </div>
+            </div>
+            <br />
+            <div class="row pb-3">
+                <div class="col-2 offset-4">
+                    <button type="submit" class="form-control btn btn-primary" asp-page-handler="OnPostAsync"><i class="bi bi-floppy2-fill"></i>&nbsp;Save</button>
+                </div>
+                <div class="col-2">
+                    <button type="reset" class="form-control btn btn-secondary" asp-page-handler="OnPostAsync"><i class="bi bi-arrow-clockwise"></i>&nbsp;Reset</button>
+                </div>
+                <div class="col-2">
+                   
+                </div>
+            </div>
+            <br />
+           @*  @if (TempData["Error"] != null)
+            {
+                <div class="alert alert-danger" style="height:60px">
+                    @foreach (var errorMessage in (List<string>)TempData["Error"])
+                    {
+                        <p>@errorMessage</p>
+                    }
+                </div>
+            } *@
+           @*  <div class="row pb-3">
+                <div class="col-2 offset-6">
+                    <button type="submit" class="form-control btn btn-primary" asp-page-handler="OnPostAsync"><i class="bi bi-floppy2-fill"></i>&nbsp;Save</button>
+                </div>
+                <div class="col-2">
+                    <button type="reset" class="form-control btn btn-secondary" asp-page-handler="OnPostAsync"><i class="bi bi-arrow-clockwise"></i>&nbsp;Reset</button>
+                </div>
+                <div class="col-2">
+                    <a class="form-control btn btn-secondary text-white" asp-page="/User/DependantList"><i class="bi bi-arrow-left-circle-fill"></i>&nbsp;Back</a>
+                </div>
+            </div> *@
+            <br />
+        </form>
+    </div>
+</div>
+@* <input type="text" id="datepicker" class="form-control input-sm visaValidDate hiddenTextBox" style="width:200px;margin-right:4px;" /> *@
+@* <div class="col-md-6">
+    <div class="container">
+        <div class="row">
+            <form method="post" asp-page-handler="OnPostAsync">
+                <div class="border p-3 mt-4">
+                    <div class="row pb-2">
+                        <h2 class="text-primary pl-3">Vaccine Registration</h2>
+                        <hr />
+                    </div>
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <div class="form-group required">
+                        <label class="control-label" asp-for="VaccineRegistrationCreate.RecipientId"></label>
+                        <input class="form-control" asp-for="VaccineRegistrationCreate.RecipientId" value="@Model.recipient" readonly />
+                        <span asp-validation-for="VaccineRegistrationCreate.RecipientId" class="text-danger"></span>
+                    </div>
+
+                    <!-- Hidden input -->
+                   
+                    <div class="form-group required">
+                        <label class="control-label" asp-for="VaccineRegistrationCreate.Hospital"></label>
+                        <select asp-for="@Model.VaccineRegistrationCreate.Hospital" class="form-control"  asp-items="@Model.HospitalOptions" >
+                            <option value="">Choose a Hospital</option>
+                        </select>
+                        <span asp-validation-for="@Model.VaccineRegistrationCreate.Hospital" class="text-danger"></span>
+                    </div>
+                    <div class="form-group required">
+                        <label class="control-label" asp-for="VaccineRegistrationCreate.ScheduleDate"></label>
+                        <select id="timeSlotDropdown" class="form-control" asp-for="@Model.VaccineRegistrationCreate.ScheduleDate">
+                            <option value="">Choose a Sheduledate</option>
+                            @foreach (var scheduledate in Model.UniqueScheduleDates)
+                            {
+                                <option value="@scheduledate">@scheduledate</option>
+                            }
+                        </select>
+                        <span asp-validation-for="@Model.VaccineRegistrationCreate.TimeSlot" class="text-danger"></span>
+                    </div>
+                    <div class="form-group required">
+                        <label class="control-label" asp-for="VaccineRegistrationCreate.TimeSlot"></label>
+                        <select id="timeSlotDropdown" class="form-control" asp-for="@Model.VaccineRegistrationCreate.TimeSlot">
+                            <option value="">Choose a Timeslot</option>
+                            @foreach (var timeSlot in Model.UniqueTimeslots)
+                            {
+                                <option value="@timeSlot">@timeSlot</option>
+                            }
+                        </select>
+                        <span asp-validation-for="@Model.VaccineRegistrationCreate.TimeSlot" class="text-danger"></span>
+                    </div>
+                    <div class="form-group required">
+                        <label class="col-md-3 control-label" asp-for="VaccineRegistrationCreate.Dose"></label>
+                        
+                        <select asp-for="VaccineRegistrationCreate.Dose" class="form-control" asp-items="Model.DoseOptions">
+                            <option value="">Choose a Dose</option>
+                        </select>
+                        <span asp-validation-for="@Model.VaccineRegistrationCreate.Dose" class="text-danger"></span>
+                    </div>
+                    
+                    <br />
+                    <div class="form-group buttons">
+                        <button type="submit" class="btn btn-primary" asp-page-handler="OnPostAsync">Save</button>
+                        <button type="reset" class="btn btn-secondary" asp-page-handler="OnPostAsync">Reset</button>
+                    </div>
+                    <br />
+                    @if (TempData["Error"] != null)
+                    {
+                        <div class="alert alert-danger" style="height:60px">
+                            @foreach (var errorMessage in (List<string>)TempData["Error"])
+                            {
+                                <p>@errorMessage</p>
+                            }
+                        </div>
+                    }
+                </div>
+            </form>
+        </div>
+    </div>
+</div> *@

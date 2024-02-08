@@ -1,0 +1,172 @@
+﻿@page
+@model DXC.BlogConnect.WebApp.Pages.Users.IndexModel
+@{
+}
+<style>
+    #blog-post-content th,
+    #blog-post-content td {
+        border: 1px solid black;
+        text-align: left;
+        padding: 8px;
+        height:10px;
+    }
+
+    #blog-post-content table {
+        border-collapse: collapse;
+    }
+    .bold
+    {
+        font-weight:bold;
+    }
+</style>
+
+
+<form >
+    <div class="py-6 text-center">
+        <h5>User Maintenance</h5>
+    </div>
+    <div  style="border:solid 1px; border-color:brown">
+    <div id="userroot" style="margin:5px">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <h7 class="text-center bold">Edit Existing User</h7>
+                                    <span style="margin-bottom: 20px; display: block;"></span>
+                                    <div class="form-group-user col-md-12">
+                                        <label class="control-label col-md-12 bold">User Name</label>
+                                        <div class="form-group has-feedback">
+                                            <table>
+                                                <tr>
+                                                    <td width="40%">
+                                                        <input id="userTid" class="form-control" placeholder="User Name" maxlength="50" spchar />
+                                                    </td>
+                                                    <td width="30%">
+                                                            <input type="submit" name="submit" value="Find" class="btn btn-primary" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="form-group-user col-md-12">
+                                        <label class="control-label col-md-12 bold">First Name</label>
+                                        <div class="form-group has-feedback">
+                                          
+                                                <input asp-for="FindUser.FirstName" class="form-control" />
+                                                <span asp-validation-for="FindUser.FirstName" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group-user col-md-12">
+                                        <label class="control-label col-md-12 bold">Last Name</label>
+                                        <div class="form-group has-feedback">
+                                            
+                                                <input asp-for="FindUser.LastName" class="form-control" />
+                                                <span asp-validation-for="FindUser.LastName" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group-user col-md-12">
+                                        <label class="control-label col-md-12 bold">Email</label>
+                                        <div class="form-group has-feedback">
+                                                <input asp-for="FindUser.EmailId" class="form-control" />
+                                                <span asp-validation-for="FindUser.EmailId" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group-user col-md-12" style="width:100%">
+                                        <div class="form-group has-feedback">
+                                            <label class="control-label col-md-12 bold">Select Role</label>
+                                            <select class="form-control" id="I_ROLEID">
+                                                <option value="0">--Select Role--</option>
+                                                <option value="1">Admin</option>
+                                                <option value="2">User</option>
+                                                <option value="3">Developer</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                            <input type="submit" name="submit" value="Update" class="btn btn-primary" />
+                                    </div>
+                                    <div class="col-sm-6">
+                                            <input type="submit" name="submit" value="Clear" class="btn btn-primary" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8 form-group-sm">
+
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div id="gridContainer">
+                                    <div id="grid1" ui-grid-edit ui-grid-exporter ui-grid-pagination ui-grid="gridSearch" class="grid" style="height:500px">
+                                        <table class="table" id="blog-post-content">
+                                            <thead>
+                                                <tr style="background-color:blueviolet;color:white">
+                                                    <th>
+                                                        User Name
+                                                    </th>
+                                                    <th>
+                                                        First Name
+                                                    </th>
+                                                    <th>
+                                                        Last Name
+                                                    </th>
+                                                    <th>
+                                                        Email
+                                                    </th>
+                                                    <th>
+                                                        Role
+                                                    </th>
+                                                    @* <th>
+                                                    Role Name
+                                                    </th>*@
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var item in Model.UserList)
+                                                {
+                                                    <tr>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.UserName)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.FirstName)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.LastName)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.EmailId)
+                                                        </td>
+                                                        <td>
+                                                            @Html.HiddenFor(modelItem => item.RoleName)
+                                                            @Html.DisplayFor(modelItem => item.RoleName)
+                                                        </td>
+                                                       
+                                                        <td>
+                                                            <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                                                            <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                                                        </td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+</form>

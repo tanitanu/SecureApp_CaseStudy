@@ -1,0 +1,51 @@
+﻿@page
+@model DXC.BlogConnect.WebApp.Pages.LoginModel
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<br />
+<br />
+<br />
+<br />
+
+<div class="form-signin">
+    
+@*<div class="row">
+    <div class="col-md-4">*@
+
+        <form method="post" >
+            <div class="method">
+            
+            <div class="row">
+                @*<label asp-for="UserLoginDTO.UserName" class="control-label"></label>*@
+                <input asp-for="UserLoginDTO.UserName" class="form-control" placeholder="User Name" />
+                <span asp-validation-for="UserLoginDTO.UserName" class="text-danger"></span>
+            
+            </div>
+            <div class="row">
+            
+             @*   <label asp-for="UserLoginDTO.Password" class="control-label"></label>*@
+                <input asp-for="UserLoginDTO.Password" class="form-control" placeholder="Password" />
+                <span asp-validation-for="UserLoginDTO.Password" class="text-danger"></span>
+            
+            </div>
+
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   <input type="submit" value="Login" class="btn btn-primary" />
+            
+              <br />
+    <br />
+        <strong>
+                    @foreach (var item in Model.ErrorList)
+                    {
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <span asp-validation-for="@item.Description" class="text-danger">@item.Description</span>
+                    }
+        </strong>
+   
+
+            </div>
+        </form>
+    </div>
+

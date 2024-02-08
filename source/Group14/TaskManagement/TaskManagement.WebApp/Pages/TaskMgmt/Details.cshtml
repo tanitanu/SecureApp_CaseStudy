@@ -1,0 +1,58 @@
+﻿@page
+@model TaskManagement.WebApp.Pages.TaskMgmt.DetailsModel
+@{
+}
+
+<h1 class="mt-3">View Task</h1>
+
+@if (Model is not null)
+{
+    <form method="post">
+        <div>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(Model => Model.Task.Title)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(Model =>  Model.Task.Title)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(Model => Model.Task.Description)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(Model => Model.Task.Description)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(Model => Model.Task.DueDate)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(Model => Model.Task.DueDate)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(Model => Model.Task.AssignedTo)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(Model => Model.Task.AssignedTo)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(Model => Model.Task.Comments)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(Model => Model.Task.Comments)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(Model => Model.Task.Status)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(Model => Model.Task.Status.Code)
+                </dd>
+            </dl>
+        </div>
+        <div>
+            <a asp-page="Edit" asp-route-id="@Model.Task.Id" class="btn btn-primary" style="width:150px;"> Edit Task</a>
+            <a asp-page="ViewList" class="btn btn-secondary" style="width:150px;"> Back to List</a>
+        </div>
+
+    </form>
+}

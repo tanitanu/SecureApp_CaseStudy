@@ -1,0 +1,16 @@
+﻿@page
+@model TechCo.Pages.CartModel
+@{
+    ViewData["Title"] = "Cart";
+}
+
+
+<component type="typeof(TechCo.Components.CartView)"
+           param-UserName="@User.Identity.Name"
+           param-RedirectURL="@Url.Page("/User/Orders")"
+           render-mode="Server" />
+
+
+@section Scripts{
+    <script src="_framework/blazor.server.js"></script>
+}

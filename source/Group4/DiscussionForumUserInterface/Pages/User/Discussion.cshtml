@@ -1,0 +1,168 @@
+﻿@page
+@model DiscussionForumUserInterface.Pages.User.DiscussionModel
+@{
+    Layout = "_UserLayout";
+}
+<partial name="_Notification" />
+<body>
+
+    <div class="question-container">
+        <div class="question-text">@Model.QuestionAnswerDetails.CategoryName</div>
+        <div class="question-text">@Model.QuestionAnswerDetails.Title</div>
+        <div class="question-content">@Html.Raw(Model.QuestionAnswerDetails.Content)</div>
+        <div class="question-details">
+
+            <div class="status-details">
+
+                <span class="status-icon">@Model.QuestionAnswerDetails.Status</span>
+
+            </div>
+
+
+            <div class="likes-dislikes">
+                @if (Model.QuestionAnswerDetails.Like == true)
+                {
+                    <form method="post" asp-page-handler="LikeDislikeDiscussion" asp-route-questionId="@Model.QuestionAnswerDetails.QuestionId" asp-route-like="false" asp-route-dislike="false">
+                        <button type="submit" style="padding: 0;border: none;background: none;">
+                            <span class="likes-icon" style="color: #3498DB;"><i class='fas fa-thumbs-up'></i></span>
+                        </button>
+                    </form>
+                }
+                else
+                {
+                    <form method="post" asp-page-handler="LikeDislikeDiscussion" asp-route-questionId="@Model.QuestionAnswerDetails.QuestionId" asp-route-like="true" asp-route-dislike="false">
+                        <button type="submit" style="padding: 0;border: none;background: none">
+                            <span class="likes-icon" style="color: #D7DBDD;"><i class='fas fa-thumbs-up'></i></span>
+                        </button>
+                    </form>
+                }
+
+                <span> @Model.QuestionAnswerDetails.LikeCount</span>
+                &nbsp;
+                @if (Model.QuestionAnswerDetails.Dislike == true)
+                {
+                    <form method="post" asp-page-handler="LikeDislikeDiscussion" asp-route-questionId="@Model.QuestionAnswerDetails.QuestionId" asp-route-like="false" asp-route-dislike="false">
+                        <button type="submit" style="padding: 0;border: none;background: none">
+                            <span class="dislikes-icon" style="color: #CD6155;"><i class='fas fa-thumbs-down'></i></span>
+                        </button>
+                    </form>
+                }
+                else
+                {
+                    <form method="post" asp-page-handler="LikeDislikeDiscussion" asp-route-questionId="@Model.QuestionAnswerDetails.QuestionId" asp-route-like="false" asp-route-dislike="true">
+                        <button type="submit" style="padding: 0;border: none;background: none">
+                            <span class="dislikes-icon" style="color: #D7DBDD;"><i class='fas fa-thumbs-down'></i></span>
+                        </button>
+                    </form>
+
+                }
+                <span> @Model.QuestionAnswerDetails.DislikeCount</span>
+            </div>
+
+        </div>
+
+        <div class="created-date">
+
+            Created Date: @Model.QuestionAnswerDetails.QuestionDateCreation <br />
+            Created By: @Model.QuestionAnswerDetails.QuestionCreatedByName
+
+        </div>
+
+    </div>
+    @if (Model.QuestionAnswerDetails.QuestionIsDelete == false && Model.QuestionAnswerDetails.Status == "Open")
+    {
+        <form method="post">
+            <div class="answer-container">
+                <div class="form-group required">
+                <label class="control-label">Answer</label>
+                <textarea id="body" class="form-control" asp-for="@Model.QuestionAnswerDetails.Answer"></textarea>
+                @Html.HiddenFor(m => m.QuestionAnswerDetails.QuestionId)
+                <div class="form-group buttons">
+                    <button type="submit" class="btn btn-success" asp-page-handler="Answer">Create</button>
+                    <button type="button" class="btn btn-danger" onclick="window.location.href ='/User/Discussions'">Cancel</button>
+                </div>
+                </div>
+            </div>
+
+        </form>
+    }
+
+    @foreach (var item in Model.QuestionAnswerDetails.AnswerDetails.Where(x => x.AnswerIsDelete == false).ToList())
+    {
+        <div class="answer-container">
+            <p id="answer">@Html.Raw(item.Answer)</p>
+            <div class="question-details">
+                <div class="created-date">
+                    Created Date: @item.AnswerDateCreation <br />
+                    Created By: @item.AnswerCreatedByName
+
+                </div>
+                <div class="likes-dislikes" style="font-size: 14px;">
+                    @if (item.AnswerCreatedBy == Model.QuestionAnswerDetails.LoginId)
+                    {
+                        <a href='/User/UpdateDiscussionAnswer?QuestionId=@Model.QuestionAnswerDetails.QuestionId&AnswerId=@item.AnswerID'><i class='fas fa-pen'></i></a>
+                        <a href='#' data-mdb-toggle="modal" data-mdb-target=#deleteModal data-id=@Model.QuestionAnswerDetails.QuestionId data-answer-id=@item.AnswerID>&nbsp;<i class='fas fa-trash-can'></i></a>
+                    }
+                </div>
+            </div>
+
+        </div>
+
+    }
+
+    <form method="post">
+        <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title" id="deleteModalLabel">Delete Discussion</h6>
+                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you want to delete?</p>
+                        @Html.Hidden("questionId")
+                        @Html.Hidden("answerId")
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">No</button>
+                        <button type="submit" class="btn btn-primary" asp-page-handler="DeleteAnswerDiscussion">Yes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+<link rel="stylesheet" href="~/css/discussion.css" />
+@section Scripts{
+    <script>
+        tinymce.init({
+            selector: 'textarea#body',
+            width: 700,
+            height: 300,
+            plugins: [
+                'advlist', 'lists', 'charmap', 'preview',
+                'anchor', 'pagebreak',
+                'searchreplace', 'wordcount', 'visualblocks', 'visualchars', 'code',
+                'insertdatetime',
+                'emoticons'
+            ],
+            toolbar: ['undo redo | styles | bold italic | alignleft aligncenter alignright alignjustify | ' +
+                'bullist numlist outdent indent | print preview media | ' +
+                'forecolor backcolor emoticons'],
+            promotion: false,
+            forced_root_block: ' ',
+            branding: false,
+            menubar: 'favs file edit view format tools',
+        });
+    </script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('a[data-mdb-toggle=modal]').click(function () {
+                $(".modal-body #questionId").val($(this).data('id'));
+                $(".modal-body #answerId").val($(this).data('answer-id'));
+            })
+        });
+    </script>
+}

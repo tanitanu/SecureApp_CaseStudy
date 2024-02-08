@@ -1,0 +1,163 @@
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\appsettings.json
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Task_Managment_Api.exe
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Task_Managment_Api.deps.json
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Task_Managment_Api.runtimeconfig.json
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Task_Managment_Api.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Task_Managment_Api.pdb
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Azure.Core.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Azure.Identity.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Humanizer.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\System.Drawing.Common.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\System.Memory.Data.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\System.Runtime.Caching.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\System.Windows.Extensions.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\Task_Managment_Api.csproj.AssemblyReference.cache
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\Task_Managment_Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\Task_Managment_Api.AssemblyInfoInputs.cache
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\Task_Managment_Api.AssemblyInfo.cs
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\Task_Managment_Api.csproj.CoreCompileInputs.cache
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\Task_Managment_Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\Task_Managment_Api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\staticwebassets\msbuild.Task_Managment_Api.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\staticwebassets\msbuild.build.Task_Managment_Api.props
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Task_Managment_Api.props
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Task_Managment_Api.props
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\scopedcss\bundle\Task_Managment_Api.styles.css
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\Task_Managment_Api.csproj.CopyComplete
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\Task_Managment_Api.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\refint\Task_Managment_Api.dll
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\Task_Managment_Api.pdb
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\Task_Managment_Api.genruntimeconfig.cache
+C:\Users\ssayyad3\OneDrive - DXC Production\Desktop\New folder\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\ref\Task_Managment_Api.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\appsettings.Development.json
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\appsettings.json
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Task_Managment_Api.exe
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Task_Managment_Api.deps.json
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Task_Managment_Api.runtimeconfig.json
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Task_Managment_Api.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Task_Managment_Api.pdb
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\AutoMapper.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Azure.Core.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Azure.Identity.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Humanizer.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Serilog.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Serilog.AspNetCore.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Serilog.Extensions.Hosting.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Serilog.Extensions.Logging.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Serilog.Formatting.Compact.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Serilog.Settings.Configuration.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Serilog.Sinks.Console.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Serilog.Sinks.Debug.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Serilog.Sinks.File.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\System.CodeDom.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\System.Drawing.Common.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\System.Memory.Data.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\System.Runtime.Caching.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\System.Windows.Extensions.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\Task_Managment_Api.csproj.AssemblyReference.cache
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\Task_Managment_Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\Task_Managment_Api.AssemblyInfoInputs.cache
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\Task_Managment_Api.AssemblyInfo.cs
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\Task_Managment_Api.csproj.CoreCompileInputs.cache
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\Task_Managment_Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\Task_Managment_Api.MvcApplicationPartsAssemblyInfo.cache
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\staticwebassets\msbuild.Task_Managment_Api.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\staticwebassets\msbuild.build.Task_Managment_Api.props
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Task_Managment_Api.props
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Task_Managment_Api.props
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\staticwebassets.build.json
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\staticwebassets.development.json
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\scopedcss\bundle\Task_Managment_Api.styles.css
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\Task_Managment_Api.csproj.CopyComplete
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\Task_Managment_Api.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\refint\Task_Managment_Api.dll
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\Task_Managment_Api.pdb
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\Task_Managment_Api.genruntimeconfig.cache
+C:\Projects\dotnetfullstack\case-study-works\source\Group14\Task_Managment_Api\Task_Managment_Api\obj\Debug\net7.0\ref\Task_Managment_Api.dll

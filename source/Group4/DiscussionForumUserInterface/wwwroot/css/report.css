@@ -1,0 +1,10 @@
+﻿#datepicker {
+    border: 1px solid #555;
+}
+#yearpicker {
+    border: 1px solid #555;
+}
+
+    #datepicker.bootstrap-datetimepicker-widget {
+        background: #365d95;
+    }

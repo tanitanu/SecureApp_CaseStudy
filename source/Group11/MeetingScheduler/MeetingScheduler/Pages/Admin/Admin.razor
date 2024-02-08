@@ -1,0 +1,129 @@
+﻿@page "/Admin"
+@using MeetingScheduler.Data;
+@using MeetingScheduler.Entities;
+@inject ILoginService Login
+@inject IRoleService Role
+@inject NavigationManager NavigationManager
+
+
+
+<div class="row justify-content-center">
+<fieldset class="border p-2 fieldset">
+    <legend class="float-none w-auto legend">Modify User Role</legend>
+        <div class="row justify-content-center">
+            <div class="col-md-1">
+            <label for="Users" class="control-label">Users</label>
+        </div>
+        <div class="col-md-4">
+            <select class="form-control" @onchange="UserClicked">
+            <option value="">-- Select User --</option>
+            @foreach (var _user in userList)
+            {
+                    if (!string.IsNullOrWhiteSpace(_user.UserName))
+                    {
+                        <option value="@_user.UserId">@_user.UserName</option>
+                    }
+            }
+        </select>           
+        </div>
+    </div>
+        <br />
+        <div class="row justify-content-center">
+        <div class="col-md-1">
+        <label asp-for="Roles" class="control-label">Roles</label>
+        </div>
+        <div class="col-md-4">
+            <select class="form-control" @onchange="RoleClicked">
+                <option value="">-- Select Role --</option>
+            @if (roleList != null)
+                {
+                    @foreach (var _role in roleList)
+                    {
+                        <option value="@_role.RoleId">@_role.RoleName</option>
+                    }
+                }
+            </select>
+        </div>     
+    </div>
+    <br />
+        <div class="row justify-content-center">
+            <div class="col-md-2">
+            </div>
+        <div class="col-md-3">
+            <button type="submit" class="btn btn-primary" @onclick="UpdateRole">Update Role</button>
+        </div>
+    </div>
+    <div class="card-text py-2" style="text-align:left; font-weight:bold;color:red">
+        <span class="col-12">@updateRoleMessage</span>
+    </div>    
+</fieldset>
+</div>
+
+
+@code {
+    List<UserVo>? userList = new List<UserVo>();
+    List<RoleVo>? roleList = new List<RoleVo>();
+    int userId { get; set; }
+    string? userName { get; set; }
+    int roleId { get; set; }
+    public string? updateRoleMessage { get; set; }
+    private const string UPDATE_ROLE = "Error ocurred while updating role!!";
+
+
+    /// <summary>
+    /// On Initialized Async method
+    /// </summary>
+    /// <returns></returns>
+    protected async override Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        userList = Login.GetUsers();
+        roleList = Role.GetRoles();
+    }
+
+    /// <summary>
+    /// On user selection change event
+    /// </summary>
+    /// <param name="userEvent"></param>
+    protected  void UserClicked(ChangeEventArgs userEvent)
+    {       
+        userName = string.Empty;
+        userId = Convert.ToInt32(userEvent.Value);
+        userName = userList.FirstOrDefault(u => u.UserId == userId).UserName;        
+        this.StateHasChanged();
+    }
+
+    /// <summary>
+    /// On role selection change event
+    /// </summary>
+    /// <param name="roleEvent"></param>
+    void RoleClicked(ChangeEventArgs roleEvent)
+    {
+        roleId = Convert.ToInt32(roleEvent.Value);
+        this.StateHasChanged();
+    }
+
+    /// <summary>
+    /// Update role button click event
+    /// </summary>
+    protected void UpdateRole()
+    {
+        try
+        {
+            var response = Role.UpdateRole(userId, new Role { RoleId = roleId });
+            if (response.IsSuccess)
+            {
+                NavigationManager.NavigateTo("/confirmationRoleUpdate");
+            }
+            else
+            {
+                updateRoleMessage = response.Message;
+            }
+        }
+        catch (Exception ex)
+        {
+            updateRoleMessage = UPDATE_ROLE;
+        }
+    }
+
+}

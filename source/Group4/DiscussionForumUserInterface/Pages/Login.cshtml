@@ -1,0 +1,57 @@
+﻿@page
+@model DiscussionForumUserInterface.Pages.LoginModel
+@{
+
+}
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+          crossorigin="anonymous" />
+    <title>Login to ConvoVerse</title>
+</head>
+<partial name="_Notification" />
+<body>
+    <div class="container">
+        <header>
+            <h2 class="main-header">ConvoVerse</h2>
+            <p class="header-description">
+                Join the Conversation: Your Gateway to Knowledge, Networking, and
+                Insights!
+            </p>
+        </header>
+        <div class="d-flex justify-content-center align-items-center container">
+            <div class="row">
+                <form method="post">
+                    <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+                    <div class="form-group required">
+                        <label class="control-label">Email</label>
+                        <input type="text"
+                               class="form-control"
+                               asp-for="LoginViewModel.Email"
+                                />
+                        <span class="text-danger" asp-validation-for="LoginViewModel.Email"></span>
+                    </div>
+                    <div class="form-group required">
+                        <label class="control-label">Password</label>
+                        <input type="password" class="form-control" asp-for="LoginViewModel.Password" />
+                        <span class="text-danger" asp-validation-for="LoginViewModel.Password"></span>
+                    </div>
+                    <div class="form-group buttons">
+                        <button type="submit" class="btn btn-success">Login</button>
+                        <button type="button" class="btn btn-danger" onclick="window.location.href = 'Index'">Cancel</button>
+                        <a asp-page="ForgotPassword">Forgot password?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
+

@@ -1,0 +1,127 @@
+﻿@page
+@model BlazorCARS.HealthShield.WebApp.Pages.user.ViewProfileModel
+@{
+    ViewData["Title"] = "View Profile";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <form method="post" asp-page-handler="OnPostAsync">
+            <div class="row pb-2">
+                <h2 class="text-primary pl-3">@ViewData["Title"]</h2>
+                <hr />
+            </div>
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="Recipient.FirstName"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Recipient.FirstName" disabled />
+                </div>
+                <div class="col-2">
+                    <label class="control-label" asp-for="Recipient.LastName"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Recipient.LastName" disabled />
+                </div>
+            </div>
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="Recipient.AadhaarNo"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Recipient.AadhaarNo" disabled />
+                </div>
+                <div class="col-2">
+                    <label class="control-label" asp-for="Recipient.DOB"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Recipient.DOB" disbaled />
+                </div>
+            </div>
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="Recipient.PrimaryContact"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Recipient.PrimaryContact" disabled />
+                </div>
+                <div class="col-2">
+                    <label class="control-label" asp-for="Recipient.SecondaryContact"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Recipient.SecondaryContact" disabled />
+                </div>
+            </div>
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="Recipient.EmergencyContact"></label>
+                </div>
+                <div class="col-4">
+                    @* <input class="form-control" asp-for="@Model.Recipient.EmergencyContact" disbaled /> *@
+                    <input class="form-control" asp-for="@Model.Recipient.EmergencyContact" disabled />
+                </div>
+                <div class="col-2">
+                    <label class="control-label" asp-for="Recipient.EmailId"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Recipient.EmailId" disabled />
+                </div>
+            </div>
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="Recipient.Address1"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Recipient.Address1" disabled />
+                </div>
+                <div class="col-2">
+                    <label class="control-label" asp-for="Recipient.Address2"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Recipient.Address2" disabled />
+                </div>
+            </div>
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="Recipient.City"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Recipient.City" disabled />
+                </div>
+                <div class="col-2">
+                    <label class="control-label" asp-for="Recipient.CountryId"></label>
+                </div>
+                <div class="col-4">
+                    <select width="500px" asp-for="@Model.Recipient.CountryId" asp-items="@Model.CountryOptions" disabled>
+                    </select>
+                </div>
+            </div>
+            <div class="row pb-3">
+                <div class="col-2">
+                    <label class="control-label" asp-for="Recipient.StateId"></label>
+                </div>
+                <div class="col-4">
+                    <select asp-for="@Model.Recipient.StateId" asp-items="@Model.StateOptions" disabled>
+                    </select>
+                </div>
+                <div class="col-2">
+                    <label class="control-label" asp-for="Recipient.PostalCode"></label>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" asp-for="@Model.Recipient.PostalCode" disabled />
+                </div>
+            </div>
+            <br />
+            <div class="row pb-3">
+                <div class="col-2 offset-10">
+                    <a class="form-control btn btn-primary" asp-page="/User/EditProfile"><i class="bi bi-floppy2-fill"></i>&nbsp;Edit</a>
+                </div>
+                @*                 <div class="col-3">
+                <button type="reset" class="form-control btn btn-secondary" asp-page-handler="OnPostAsync"><i class="bi bi-arrow-clockwise"></i>&nbsp;Reset</button>
+                </div> *@
+            </div>
+            <br />
+        </form>
+    </div>
+</div>

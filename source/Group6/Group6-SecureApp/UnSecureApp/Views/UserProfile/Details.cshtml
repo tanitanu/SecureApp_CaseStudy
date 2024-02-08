@@ -1,0 +1,40 @@
+﻿@model UnSecureApp.Models.UserProfile
+
+@{
+    ViewData["Title"] = "Details";
+}
+@{
+    Layout = "_Layout";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>UserProfile</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Dob)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Dob)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Adhar)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Adhar)
+        </dd>
+
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id"><i class="bi bi-pencil-square"></i></a> |
+    <a asp-action="Index"><i class="bi bi-arrow-left col-6"></i></a>
+</div>

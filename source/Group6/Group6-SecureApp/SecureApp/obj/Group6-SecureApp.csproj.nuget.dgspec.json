@@ -1,0 +1,79 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\skudapali\\OneDrive - DXC Production\\Projects\\Group6-SecureApp\\Group6-SecureApp\\Group6-SecureApp.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\skudapali\\OneDrive - DXC Production\\Projects\\Group6-SecureApp\\Group6-SecureApp\\Group6-SecureApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\skudapali\\OneDrive - DXC Production\\Projects\\Group6-SecureApp\\Group6-SecureApp\\Group6-SecureApp.csproj",
+        "projectName": "Group6-SecureApp",
+        "projectPath": "C:\\Users\\skudapali\\OneDrive - DXC Production\\Projects\\Group6-SecureApp\\Group6-SecureApp\\Group6-SecureApp.csproj",
+        "packagesPath": "C:\\Users\\skudapali\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\skudapali\\OneDrive - DXC Production\\Projects\\Group6-SecureApp\\Group6-SecureApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\skudapali\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "C:\\Users\\skudapali\\OneDrive - DXC Production\\nug\\NuGet-Org": {},
+          "C:\\Users\\skudapali\\OneDrive - DXC Production\\nug\\PreReleasePackage": {},
+          "C:\\Users\\skudapali\\OneDrive - DXC Production\\nug\\ReleasePackage": {},
+          "C:\\Users\\skudapali\\OneDrive - DXC Production\\nug\\json": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/AmericanAirlines/Crew_Scheduling/_packaging/ROMS_Crewsystems/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/AmericanAirlines/_packaging/CrewSystems-Legacy/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/AmericanAirlines/_packaging/CrewSystems/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.Negotiate": {
+              "target": "Package",
+              "version": "[6.0.22, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

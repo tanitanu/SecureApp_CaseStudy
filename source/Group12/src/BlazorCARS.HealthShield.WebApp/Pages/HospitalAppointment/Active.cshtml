@@ -1,0 +1,39 @@
+﻿@page
+@model BlazorCARS.HealthShield.WebApp.Pages.HospitalAppointment.ActiveModel
+@{
+	ViewData["Title"] = "Active Hospital";
+}
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">@ViewData["Title"]</h2>
+        </div>
+        <div class="col-6 text-end">
+            
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>Recipient Name</th>
+            <th>Schedule Date</th>
+            <th>Time Slot</th>
+            <th>Dose</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ActiveHospitallist)
+        {
+            <tr>
+                <td>@item.RecipientName</td>
+                <td>@item.ScheduleDate.ToString("dd-MMM-yyyy")</td>
+                <td>@item.TimeSlot</td>
+                <td>@item.Dose</td> 
+            </tr>
+        }
+    </tbody>
+</table>

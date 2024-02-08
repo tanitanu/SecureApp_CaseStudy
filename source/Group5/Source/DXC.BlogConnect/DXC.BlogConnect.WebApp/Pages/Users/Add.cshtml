@@ -1,0 +1,63 @@
+﻿@page
+@model DXC.BlogConnect.WebApp.Pages.Users.AddModel
+
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h4>Registration</h4>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+       
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @foreach (var item in Model.ErrorList)
+            {
+                <span asp-validation-for="@item.Description" class="text-danger">@item.Description</span>
+            }
+            <div class="form-group">
+                <label asp-for="UserAddDTO.UserName" class="control-label"></label>
+                <input asp-for="UserAddDTO.UserName" class="form-control" />
+                <span asp-validation-for="UserAddDTO.UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserAddDTO.FirstName" class="control-label"></label>
+                <input asp-for="UserAddDTO.FirstName" class="form-control" />
+                <span asp-validation-for="UserAddDTO.FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserAddDTO.LastName" class="control-label"></label>
+                <input asp-for="UserAddDTO.LastName" class="form-control" />
+                <span asp-validation-for="UserAddDTO.LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserAddDTO.EmailId" class="control-label"></label>
+                <input asp-for="UserAddDTO.EmailId" class="form-control" />
+                <span asp-validation-for="UserAddDTO.EmailId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserAddDTO.Password" class="control-label"></label>
+                <input asp-for="UserAddDTO.Password" class="form-control" />
+                <span asp-validation-for="UserAddDTO.Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserAddDTO.ConfirmPassword" class="control-label"></label>
+                <input asp-for="UserAddDTO.ConfirmPassword" class="form-control" />
+                <span asp-validation-for="UserAddDTO.ConfirmPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+   
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,42 @@
+﻿@page
+@model DXC.BlogConnect.WebApp.Pages.Users.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h5>Edit Profile</h5>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="UserEditDTO.Id" />
+
+            <div class="form-group">
+                <label asp-for="UserEditDTO.FirstName" class="control-label"></label>
+                <input asp-for="UserEditDTO.FirstName" class="form-control" />
+                <span asp-validation-for="UserEditDTO.FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserEditDTO.LastName" class="control-label"></label>
+                <input asp-for="UserEditDTO.LastName" class="form-control" />
+                <span asp-validation-for="UserEditDTO.LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserEditDTO.EmailId" class="control-label"></label>
+                <input asp-for="UserEditDTO.EmailId" class="form-control" />
+                <span asp-validation-for="UserEditDTO.EmailId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

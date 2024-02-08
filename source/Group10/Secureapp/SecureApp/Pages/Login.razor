@@ -1,0 +1,41 @@
+﻿@page "/login"
+<h3>Login</h3>
+
+@if (ShowLoginErrors)
+{
+    <div class="alert alert-danger" role="alert">
+
+        <p>@Errors</p>
+
+    </div>
+}
+
+<EditForm Model="_userLogin" OnValidSubmit="Login_User" class="card card-body bg-light mt-5">
+    <DataAnnotationsValidator />
+    <div class="form-group row">
+        <label for="email" class="col-md-2 col-form-label">Email:</label>
+        <div class="col-md-4">
+            <InputText id="email" class="form-control" @bind-Value="_userLogin.Email" />
+            <ValidationMessage For="@(() => _userLogin.Email)" />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="password" class="col-md-2 col-form-label">Password:</label>
+        <div class="col-md-4">
+            <InputText type="password" id="password" class="form-control" @bind-Value="_userLogin.Password" />
+            <ValidationMessage For="@(() => _userLogin.Password)" />
+        </div>
+    </div>
+
+    <div>
+        <input type="checkbox" value="lsRememberMe" id="rememberMe"> <label for="rememberMe">Remember me</label>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 text-right">
+            <button type="submit" class="btn btn-success">Login</button>
+        </div>
+    </div>
+
+</EditForm>

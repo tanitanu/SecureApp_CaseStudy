@@ -1,0 +1,291 @@
+﻿@page "/DashBoard"
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.Calendars;
+@using Syncfusion.Blazor.Inputs;
+@using Syncfusion.Blazor.Buttons;
+@using MeetingScheduler.Entities;
+@using MeetingScheduler.Authentication;
+@using MeetingScheduler.Data;
+@using Utilities;
+@inject IMeetingService meetingService
+@inject ILocalStorage LocalStorage
+@inject AuthenticationStateProvider AuthenticationStateProviders
+
+<PageTitle>Meeting Scheduler</PageTitle>
+
+<div>
+    <SfSchedule TValue=MeetingDTO SelectedDate="@CurrentDate" @ref="scheduleObj">
+
+        <ScheduleEvents TValue="MeetingDTO" OnPopupOpen="@OnPopupOpen"
+                        OnPopupClose="OnPopupClose" EventRendered="OnEventRendered">
+        </ScheduleEvents>
+        <ScheduleEventSettings DataSource="@meetings"></ScheduleEventSettings>
+        <ScheduleTemplates>
+            <EditorHeaderTemplate>
+                @{
+                    var subject = (context as MeetingDTO)?.Subject;
+                }
+                @if (string.IsNullOrEmpty(subject))
+                {
+                    <div>Create New Meeting</div>
+                }
+                else
+                {
+                    <div>Edit Meeting</div>
+                }
+            </EditorHeaderTemplate>
+            <EditorTemplate>
+                <table class="custom-event-editor" width="100%" cellpadding="5">
+                    <tbody>
+                        <tr>
+                            <td class="e-textlabel">Title</td>
+                            <td colspan="4">
+                                <SfTextBox @bind-Value="@((context as MeetingDTO).Subject)" val></SfTextBox>
+                                <ValidationMessage For="()=>((context as MeetingDTO).Subject)" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="e-textlabel">Email Address</td>
+                            <td colspan="4">
+                                <SfTextBox @bind-Value="@((context as MeetingDTO).emailAddresses)"></SfTextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="e-textlabel">Location</td>
+                            <td colspan="4">
+                                <SfTextBox @bind-Value="@((context as MeetingDTO).Location)"></SfTextBox>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="e-textlabel">From</td>
+                            <td colspan="4">
+                                <SfDateTimePicker @bind-Value="@((context as MeetingDTO).StartTime)" Min='@MinDateTime'></SfDateTimePicker>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="e-textlabel">To</td>
+                            <td colspan="4">
+                                <SfDateTimePicker @bind-Value="@((context as MeetingDTO).EndTime)" Min='@MinDateTime'></SfDateTimePicker>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="e-textlabel">All Day</td>
+                            <td colspan="4">
+                                <SfCheckBox Label="AllDay" @bind-Checked="@((context as MeetingDTO).IsAllDay)"></SfCheckBox>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="e-textlabel">Description</td>
+                            <td colspan="4">
+                                <SfTextBox Multiline="true" @bind-Value="@((context as MeetingDTO).Description)"></SfTextBox>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </EditorTemplate>
+            <EditorFooterTemplate>
+                <div id="event-footer">
+                    <div id="right-button">
+                        <SfButton IsPrimary="true"
+                                  OnClick="@(() => SendMeeting())">Send</SfButton>
+                        <SfButton IsPrimary="true" OnClick="@(() => Close())">Cancel</SfButton>
+
+                        <SfButton IsPrimary="true"
+                                  OnClick="@(() => DeleteMeeting())">Delete</SfButton>
+                    </div>
+                </div>
+            </EditorFooterTemplate>
+        </ScheduleTemplates>
+
+        <ScheduleViews>
+            <ScheduleView Option="View.Day"></ScheduleView>
+            <ScheduleView Option="View.Week"></ScheduleView>
+            <ScheduleView Option="View.WorkWeek"></ScheduleView>
+            <ScheduleView Option="View.Month"></ScheduleView>
+            <ScheduleView Option="View.Year"></ScheduleView>
+        </ScheduleViews>
+
+    </SfSchedule>
+</div>
+@code {
+    private DateTime CurrentDate = DateTime.Now;
+
+    public string? userId;
+    public string userName;
+    private string? rolename;
+    private bool isChecked = false;
+    SfSchedule<MeetingDTO> scheduleObj;
+    private bool isSendClick = false;
+    private bool isDeleteClick = false;
+    public DateTime MinDateTime { get; set; } = DateTime.Now;
+
+    List<MeetingDTO> meetings;
+
+    /// <summary>
+    /// On meeting scheduler pop up open event
+    /// </summary>
+    /// <param name="args"></param>
+    public void OnPopupOpen(PopupOpenEventArgs<MeetingDTO> args)
+    {
+        if (args.Data.StartTime < DateTime.Now || (args.Data.MeetingCreatedUserId != 0 &&
+            args.Data.MeetingCreatedUserId != Convert.ToInt32(userId)))            
+        {
+            args.Cancel = true;
+        }
+    }     
+
+    /// <summary>
+    /// On meeting scheduler pop up close event
+    /// </summary>
+    /// <param name="args"></param>
+    /// <returns></returns>
+    public async Task OnPopupClose(PopupCloseEventArgs<MeetingDTO> args)
+    {
+
+        if (args.Type == PopupType.Editor && args.Data != null && isSendClick)
+        {
+
+            MeetingDTO meetingDetails = new MeetingDTO();
+            meetingDetails.Subject = args.Data.Subject;
+            if (args.Data.IsAllDay == true)
+            {
+                DateTime meetingdate = Convert.ToDateTime(args.Data.StartTime);
+                meetingDetails.StartTime = new DateTime(meetingdate.Year, meetingdate.Month, 
+                                            meetingdate.Day, 0, 0, 0);
+                meetingDetails.EndTime = meetingDetails.StartTime;
+            }
+            else
+            {
+                meetingDetails.StartTime = args.Data.StartTime;
+                meetingDetails.EndTime = args.Data.EndTime;
+            }
+            meetingDetails.IsAllDay = args.Data.IsAllDay;
+            meetingDetails.Description = string.IsNullOrWhiteSpace(args.Data.Description)
+                                            ? string.Empty : args.Data.Description;            
+            meetingDetails.Location = string.IsNullOrWhiteSpace(args.Data.Location)
+                                                ? string.Empty : args.Data.Location;
+            meetingDetails.emailAddresses = args.Data.emailAddresses;
+            meetingDetails.MeetingCreatedUserId = !string.IsNullOrWhiteSpace(userId) ? Convert.ToInt32(userId) : 0;
+            meetingDetails.LastUpdatedUserId = userName;
+            meetingDetails.UserName = string.Empty;
+
+
+            if (args.Data.MeetingId != 0)
+            {
+                meetingDetails.MeetingId = args.Data.MeetingId;
+                var response =   meetingService.EditMeeting(meetingDetails);
+            }
+            else
+            {
+                var response =   meetingService.CreateNewMeeting(meetingDetails);
+            }
+
+            //meetings = meetingService.GetAllMeetings();
+            if (!string.IsNullOrWhiteSpace(rolename)
+                    && rolename.ToLower().Trim() == "admin")
+            {
+                meetings = meetingService.GetAllMeetings();
+            }
+            else
+            {
+                meetings = meetingService.GetUserMeetings(Convert.ToInt32(userId));
+            }
+
+        }
+        else if(args.Type == PopupType.Editor && args.Data != null && isDeleteClick)
+        {           
+            var response = meetingService.DeleteMeeting(args.Data.MeetingId);
+           // meetings = meetingService.GetAllMeetings();
+            if (!string.IsNullOrWhiteSpace(rolename)
+                     && rolename.ToLower().Trim() == "admin")
+            {
+                meetings = meetingService.GetAllMeetings();
+            }
+            else
+            {
+                meetings = meetingService.GetUserMeetings(Convert.ToInt32(userId));
+            }
+        }
+    }
+
+    /// <summary>
+    /// On meeting scheduler event rendered
+    /// </summary>
+    /// <param name="args"></param>
+    public void OnEventRendered(EventRenderedArgs<MeetingDTO> args)
+    {
+        Dictionary<string, object> attributes = new Dictionary<string, object>();
+        if (!string.IsNullOrWhiteSpace(rolename)
+             && args.Data.MeetingCreatedUserId != Convert.ToInt32(userId)
+             && rolename.ToLower().Trim() == "admin")
+        {
+            attributes.Add("style", "background: #b6ff00;Color:black");
+        }        
+        args.Attributes = attributes;
+    }
+
+    /// <summary>
+    /// Send meeting button click event
+    /// </summary>
+    private void SendMeeting()
+    {
+        isSendClick = true;
+        isDeleteClick = false;
+        scheduleObj.CloseEditor();
+    }
+
+    /// <summary>
+    /// Delete meeting button click event
+    /// </summary>
+    private void DeleteMeeting()
+    {
+        isDeleteClick = true;
+        isSendClick = false;
+        scheduleObj.CloseEditor();
+    }    
+
+    /// <summary>
+    /// Close meeting  click button event
+    /// </summary>
+    private void Close()
+    {
+        isSendClick = false;
+        isDeleteClick = false;
+        scheduleObj.CloseEditor();
+    }
+
+    /// <summary>
+    /// On Initialized Async
+    /// </summary>
+    /// <returns></returns>
+    protected async override Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        userId = await LocalStorage.GetStringAsync("userId");
+        userName = await LocalStorage.GetStringAsync("username");
+        rolename = await LocalStorage.GetStringAsync("rolename");
+
+        if (!string.IsNullOrWhiteSpace(rolename) 
+                    && rolename.ToLower().Trim() == "admin")
+        {
+            meetings = meetingService.GetAllMeetings();
+        }
+        else
+        {
+            meetings = meetingService.GetUserMeetings(Convert.ToInt32(userId));
+        }
+    }
+
+}
+<style>
+    #verify {
+        position: fixed;
+        padding: 0 20px;
+    }
+
+    #right-button {
+        padding: 0 10px;
+    }
+</style>

@@ -1,0 +1,175 @@
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\bin\Debug\net6.0\appsettings.json
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\bin\Debug\net6.0\SecureApp.staticwebassets.runtime.json
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\bin\Debug\net6.0\SecureApp.exe
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\bin\Debug\net6.0\SecureApp.deps.json
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\bin\Debug\net6.0\SecureApp.runtimeconfig.json
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\bin\Debug\net6.0\SecureApp.dll
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\bin\Debug\net6.0\SecureApp.pdb
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.Negotiate.dll
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\bin\Debug\net6.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\bin\Debug\net6.0\Microsoft.Extensions.Features.dll
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\bin\Debug\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\bin\Debug\net6.0\System.IO.Pipelines.dll
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\bin\Debug\net6.0\runtimes\linux\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\bin\Debug\net6.0\runtimes\osx\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\obj\Debug\net6.0\SecureApp.csproj.AssemblyReference.cache
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\obj\Debug\net6.0\SecureApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\obj\Debug\net6.0\SecureApp.AssemblyInfoInputs.cache
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\obj\Debug\net6.0\SecureApp.AssemblyInfo.cs
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\obj\Debug\net6.0\SecureApp.csproj.CoreCompileInputs.cache
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\obj\Debug\net6.0\SecureApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\obj\Debug\net6.0\SecureApp.RazorAssemblyInfo.cache
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\obj\Debug\net6.0\SecureApp.RazorAssemblyInfo.cs
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\obj\Debug\net6.0\staticwebassets\msbuild.SecureApp.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\obj\Debug\net6.0\staticwebassets\msbuild.build.SecureApp.props
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.SecureApp.props
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.SecureApp.props
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\obj\Debug\net6.0\scopedcss\bundle\SecureApp.styles.css
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\obj\Debug\net6.0\scopedcss\projectbundle\SecureApp.bundle.scp.css
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\obj\Debug\net6.0\SecureApp.csproj.CopyComplete
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\obj\Debug\net6.0\SecureApp.dll
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\obj\Debug\net6.0\refint\SecureApp.dll
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\obj\Debug\net6.0\SecureApp.pdb
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\obj\Debug\net6.0\SecureApp.genruntimeconfig.cache
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\Group6-SecureApp\obj\Debug\net6.0\ref\SecureApp.dll
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\bin\Debug\net6.0\appsettings.json
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\bin\Debug\net6.0\SecureApp.staticwebassets.runtime.json
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\bin\Debug\net6.0\SecureApp.exe
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\bin\Debug\net6.0\SecureApp.deps.json
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\bin\Debug\net6.0\SecureApp.runtimeconfig.json
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\bin\Debug\net6.0\SecureApp.dll
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\bin\Debug\net6.0\SecureApp.pdb
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.Negotiate.dll
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\bin\Debug\net6.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\bin\Debug\net6.0\Microsoft.Extensions.Features.dll
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\bin\Debug\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\bin\Debug\net6.0\System.IO.Pipelines.dll
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\bin\Debug\net6.0\runtimes\linux\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\bin\Debug\net6.0\runtimes\osx\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\obj\Debug\net6.0\SecureApp.csproj.AssemblyReference.cache
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\obj\Debug\net6.0\SecureApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\obj\Debug\net6.0\SecureApp.AssemblyInfoInputs.cache
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\obj\Debug\net6.0\SecureApp.AssemblyInfo.cs
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\obj\Debug\net6.0\SecureApp.csproj.CoreCompileInputs.cache
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\obj\Debug\net6.0\SecureApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\obj\Debug\net6.0\SecureApp.RazorAssemblyInfo.cache
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\obj\Debug\net6.0\SecureApp.RazorAssemblyInfo.cs
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\obj\Debug\net6.0\staticwebassets\msbuild.SecureApp.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\obj\Debug\net6.0\staticwebassets\msbuild.build.SecureApp.props
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.SecureApp.props
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.SecureApp.props
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\obj\Debug\net6.0\scopedcss\bundle\SecureApp.styles.css
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\obj\Debug\net6.0\scopedcss\projectbundle\SecureApp.bundle.scp.css
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\obj\Debug\net6.0\SecureApp.csproj.CopyComplete
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\obj\Debug\net6.0\SecureApp.dll
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\obj\Debug\net6.0\refint\SecureApp.dll
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\obj\Debug\net6.0\SecureApp.pdb
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\obj\Debug\net6.0\SecureApp.genruntimeconfig.cache
+C:\Users\skudapali\OneDrive - DXC Production\Projects\Group6-SecureApp\SecureApp\obj\Debug\net6.0\ref\SecureApp.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\appsettings.Development.json
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\appsettings.json
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\SecureApp.staticwebassets.runtime.json
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\SecureApp.exe
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\SecureApp.deps.json
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\SecureApp.runtimeconfig.json
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\SecureApp.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\SecureApp.pdb
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\Azure.Core.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\Azure.Identity.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\Humanizer.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.Negotiate.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\Microsoft.Extensions.Features.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\Mono.TextTemplating.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\System.CodeDom.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\System.DirectoryServices.Protocols.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\System.IO.Pipelines.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\System.Memory.Data.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\System.Text.Json.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\runtimes\linux\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\runtimes\osx\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\obj\Debug\net6.0\SecureApp.csproj.AssemblyReference.cache
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\obj\Debug\net6.0\SecureApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\obj\Debug\net6.0\SecureApp.AssemblyInfoInputs.cache
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\obj\Debug\net6.0\SecureApp.AssemblyInfo.cs
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\obj\Debug\net6.0\SecureApp.csproj.CoreCompileInputs.cache
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\obj\Debug\net6.0\SecureApp.MvcApplicationPartsAssemblyInfo.cache
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\obj\Debug\net6.0\SecureApp.RazorAssemblyInfo.cache
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\obj\Debug\net6.0\SecureApp.RazorAssemblyInfo.cs
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\obj\Debug\net6.0\staticwebassets\msbuild.SecureApp.Microsoft.AspNetCore.StaticWebAssets.props
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\obj\Debug\net6.0\staticwebassets\msbuild.build.SecureApp.props
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.SecureApp.props
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.SecureApp.props
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\obj\Debug\net6.0\staticwebassets.pack.json
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\obj\Debug\net6.0\staticwebassets.build.json
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\obj\Debug\net6.0\staticwebassets.development.json
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\obj\Debug\net6.0\scopedcss\bundle\SecureApp.styles.css
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\obj\Debug\net6.0\scopedcss\projectbundle\SecureApp.bundle.scp.css
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\obj\Debug\net6.0\SecureApp.csproj.CopyComplete
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\obj\Debug\net6.0\SecureApp.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\obj\Debug\net6.0\refint\SecureApp.dll
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\obj\Debug\net6.0\SecureApp.pdb
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\obj\Debug\net6.0\SecureApp.genruntimeconfig.cache
+C:\SecureApp\source\Group6\Group6-SecureApp\SecureApp\obj\Debug\net6.0\ref\SecureApp.dll

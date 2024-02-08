@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="654ff69f367f4b48b5a2935b069dadef" Name="Diagram1">
+        <EntityTypeShape EntityType="ImageUploadEntityDataModel.User" Width="1.5" PointX="1.375" PointY="0.5" />
+        <EntityTypeShape EntityType="ImageUploadEntityDataModel.AuditLog" Width="1.5" PointX="1.375" PointY="4.25" />
+        <EntityTypeShape EntityType="ImageUploadEntityDataModel.FileUpload" Width="1.5" PointX="3.625" PointY="0.625" />
+        <AssociationConnector Association="ImageUploadEntityDataModel.FK_UserID" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

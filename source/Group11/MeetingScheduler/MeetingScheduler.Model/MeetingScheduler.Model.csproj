@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MeetingScheduler.Common\MeetingScheduler.Common.csproj" />
+    <ProjectReference Include="..\MeetingScheduler.DAL\MeetingScheduler.DAL.csproj" />
+    <ProjectReference Include="..\MeetingScheduler.Entities\MeetingScheduler.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

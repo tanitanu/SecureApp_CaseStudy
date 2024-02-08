@@ -1,0 +1,106 @@
+﻿@layout LoginLayout
+@page "/"
+@page "/login"
+
+
+@inject AuthenticateUser authUser
+@inject UserInfo uInfo
+
+<center>    
+    <br /><br />
+    <div class="col-8 card" style="border: 1px solid rgb(0 0 0 / 50%);border-radius:0.5rem">
+        <div class="col-12 row">
+            <p>&nbsp;</p>
+        </div>        
+        <div class="col-12 row">
+            <div class="col-6" style="align-content:center">
+                <img style="align-content:center" src='Images/HealthShieldLogo.png' />                
+            </div>
+            <div class="col-6" style="border-left:groove">
+                <form>
+                    <div>
+                        <h3 style="font-weight:bold; color:purple">Login</h3>
+                    </div>
+                    <br/>
+                    <div>
+                        <h6 style="font-weight:bold; color:red">@errorMessage</h6>
+                    </div>
+                    <div class="col-12 row input-group">                             
+                        <input type="text" class="form-control" placeholder="Username" @onfocus=userNameFocused @bind=userName />
+                    </div>
+                    <br/>
+                    <div class="col-12 row input-group">
+                        <input type="password" class="form-control" placeholder="Password" @bind=Password />
+                    </div>
+                    <br/>
+                    <div class="col-12 row">
+                        <input type="submit" class="btn btn-primary" value="Submit" @onclick=btnSubmit />
+                    </div>
+                    <br/>
+                    <div class="col-12 row">
+                        <input type="submit" @onclick=btnRegister class="btn btn-link" value="Don't have account? Register" />
+                    </div>
+                </form>
+            </div>
+        </div>
+         <div class="col-12 row">
+            <p>&nbsp;</p>
+        </div>
+    </div>
+    <br/>
+    
+</center>
+
+
+
+@code {
+
+    private string userName { get; set; }
+    private string Password { get; set; }
+    public string errorMessage { get; set; } = "";
+
+    public int userLevel { get; set; }
+    
+    private async Task btnRegister()
+    {
+        try
+        {
+            navMan.NavigateTo("/HealthSheild/Register", true);
+        }
+        catch(Exception ex)
+        {
+            throw ex;
+        }
+
+    }
+
+    private async Task btnSubmit()
+    {
+        try
+        {
+            userLevel = authUser.ValidateUser(userName);
+
+            if(userLevel == 0)
+            {
+                errorMessage = "Please enter valid credentials!";
+                StateHasChanged();
+            }
+            else
+            {
+                uInfo.UserId = userName;
+                uInfo.UserLevel = userLevel;
+                navMan.NavigateTo("/HealthShield/index", true);   
+            }
+        }
+        catch(Exception ex)
+        {
+            throw ex;
+        }
+
+    }
+
+    private async Task userNameFocused()
+    {
+        errorMessage = "";
+    }
+}

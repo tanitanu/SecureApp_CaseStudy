@@ -1,0 +1,82 @@
+﻿@page
+@model TaskManagement.WebApp.Pages.TaskMgmt.ViewListModel
+@{
+}
+
+<h1>Welcome to Task Management Application</h1>
+
+<p>
+    <a asp-page="/TaskMgmt/Create" class="btn btn-secondary">Create New Task</a>
+</p>
+<table id="DT_load" class="table">
+    <thead>
+        <tr>
+            <th>
+                Title
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Due Date
+            </th>
+            <th>
+                Assigned To
+            </th>
+            <th>
+                Comments
+            </th>
+            <th>
+                Status
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.TaskList != null && Model.TaskList.Any())
+        {
+            @foreach (var item in Model.TaskList)
+            {
+                <tr>
+                    <td>
+                        @item.Title
+                    </td>
+                    <td>
+                        @item.Description
+                    </td>
+                    <td>
+                        @item.DueDate
+                    </td>
+                    <td>
+                        @item.AssignedTo
+                    </td>
+                    <td>
+                        @item.Comments
+                    </td>
+                    <td>
+                        @item.Status.Code
+                    </td>
+                    <td>
+                        <div class="w-75 btn-group" role="group">
+                            <a asp-page="/TaskMgmt/Details" asp-route-id="@item.Id" class="btn btn-outline-primary mx-2"><i class="bi bi-eye-fill"></i></a>
+                            <a asp-page="/TaskMgmt/Edit" asp-route-id="@item.Id" class="btn btn-outline-success mx-2"><i class="bi bi-pencil"></i></a>
+                            <a asp-page="/TaskMgmt/Delete" asp-route-id="@item.Id" class="btn btn-outline-danger mx-2"><i class="bi bi-trash-fill"></i></a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="7" class="text-center">There are no Tasks available to view</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+    <script src="~/js/TaskItem.js"></script>
+}

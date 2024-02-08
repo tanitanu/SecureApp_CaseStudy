@@ -1,0 +1,32 @@
+﻿@page
+@using BlazorCARS.HealthShield.Utility;
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@* <div class="text-center">
+    <h1 class="display-4">Welcome to <strong style="color:#08739C;">Covid Vaccine Registration app</strong></h1> *@
+    
+    @* <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p> *@
+@* </div> *@
+<div class="container-fluid">
+    <h1 class="display-4 text-center">Welcome to <strong style="color:#08739C;">Covid Vaccine Registration app</strong></h1>
+    <div class="row">
+        <div class="col-12">
+            <img class="form-control" src="~/Images/COVID-19-Vaccination_img.png" alt="Banner">
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-4">
+            <p style="font-size:20px;"><span class="fw-bolder" style="color:#08739C;">Step1: </span>Book an Appoinment on BLAZORCARS Healthshield</p>
+        </div>
+        <div class="col-4">
+            <p style="font-size:20px;"><span class="fw-bolder" style="color:#08739C;">Step2: </span>Get your Vaccination safely at the time of your appointment</p>
+        </div>
+        <div class="col-4">
+            <p style="font-size:20px;"><span class="fw-bolder" style="color:#08739C;">Step3: </span>Download your vaccination certificate from BLAZORCARS Healthshield</p>
+        </div>
+    </div>
+</div>

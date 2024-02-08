@@ -1,0 +1,61 @@
+﻿@page
+@using NonFactors.Mvc.Grid;
+@model DiscussionForumUserInterface.Pages.Admin.UserListModel
+@{
+    Layout = "_AdminLayout";
+}
+<partial name="_Notification" />
+@(Html.Grid(Model.UsersModels).Build(columns =>
+    {
+        columns.Add().RenderedAs((model, row) => row + 1).Titled("#").Css("text-center").Width("5%");
+        columns.Add(model => model.UserName).Titled("User Name").Filterable(GridFilterCase.Lower).Width("20%");
+        columns.Add(model => model.Email).Titled("Email").Width("20%").Filterable(GridFilterCase.Lower);
+        columns.Add(model => model.Role).Titled("Role").Width("10%").Filterable(GridFilterCase.Lower);
+        columns.Add(model => model.IsActive).Titled("Status").Width("10%").
+       RenderedAs(model => model.IsActive == true ? "<span style= 'color:#008000'><i class ='fas fa-user-check'></i></span>" :
+       "<span style= 'color:#D2042D'><i class ='fas fa-user-xmark'></i></span>").Encoded(false);
+        columns.Add(model => model.IsActive == true ? $"<a href='#' data-mdb-toggle='modal' data-mdb-target='#deleteModal'data-id='{model.Id}'><i class = 'fas fa-trash-can'></i></a>" :
+        $"<i class = 'fas fa-trash-can'></i>")
+        .Width("5%").Encoded(false);
+    }).Empty("No data found")
+    .Filterable()
+    .Sortable()
+    .Pageable(pager =>
+    {
+        pager.PagesToDisplay = @Model.UsersModels.Count() / 10 <= 1 ? 1 : @Model.UsersModels.Count();
+        pager.CurrentPage = 1;
+        pager.RowsPerPage = 10;
+    })
+
+)
+<form method="post">
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title" id="deleteModalLabel">Deactivate User</h6>
+                    <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to deactivate?</p>
+                    @Html.Hidden("userId")
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">No</button>
+                    <button type="submit" class="btn btn-primary" asp-page-handler="DeactivateUser">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var id_value = "";
+        $('a[data-mdb-toggle=modal]').click(function () {
+            id_value = $(this).data('id');
+            $(".modal-body #userId").val(id_value);
+        })
+    });
+</script>

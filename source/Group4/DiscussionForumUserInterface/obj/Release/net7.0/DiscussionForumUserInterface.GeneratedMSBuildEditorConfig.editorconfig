@@ -1,0 +1,133 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = DiscussionForumUserInterface
+build_property.RootNamespace = DiscussionForumUserInterface
+build_property.ProjectDir = C:\NetFullStack\source\Group4\DiscussionForumUserInterface\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\NetFullStack\source\Group4\DiscussionForumUserInterface
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/NetFullStack/source/Group4/DiscussionForumUserInterface/Pages/Admin/CreateDiscussion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ3JlYXRlRGlzY3Vzc2lvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/NetFullStack/source/Group4/DiscussionForumUserInterface/Pages/Admin/Discussion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRGlzY3Vzc2lvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/NetFullStack/source/Group4/DiscussionForumUserInterface/Pages/Admin/Discussions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRGlzY3Vzc2lvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/NetFullStack/source/Group4/DiscussionForumUserInterface/Pages/Admin/UpdateDiscussion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXBkYXRlRGlzY3Vzc2lvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/NetFullStack/source/Group4/DiscussionForumUserInterface/Pages/Admin/UpdateDiscussionAnswer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXBkYXRlRGlzY3Vzc2lvbkFuc3dlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/NetFullStack/source/Group4/DiscussionForumUserInterface/Pages/Admin/UserList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlckxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/NetFullStack/source/Group4/DiscussionForumUserInterface/Pages/Admin/UserReported.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlclJlcG9ydGVkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/NetFullStack/source/Group4/DiscussionForumUserInterface/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/NetFullStack/source/Group4/DiscussionForumUserInterface/Pages/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9yZ290UGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/NetFullStack/source/Group4/DiscussionForumUserInterface/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/NetFullStack/source/Group4/DiscussionForumUserInterface/Pages/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/NetFullStack/source/Group4/DiscussionForumUserInterface/Pages/MvcGrid/_Grid.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTXZjR3JpZFxfR3JpZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/NetFullStack/source/Group4/DiscussionForumUserInterface/Pages/MvcGrid/_Pager.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTXZjR3JpZFxfUGFnZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/NetFullStack/source/Group4/DiscussionForumUserInterface/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/NetFullStack/source/Group4/DiscussionForumUserInterface/Pages/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/NetFullStack/source/Group4/DiscussionForumUserInterface/Pages/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzZXRQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/NetFullStack/source/Group4/DiscussionForumUserInterface/Pages/SecureLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VjdXJlTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/NetFullStack/source/Group4/DiscussionForumUserInterface/Pages/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/NetFullStack/source/Group4/DiscussionForumUserInterface/Pages/Shared/_Notification.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Ob3RpZmljYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/NetFullStack/source/Group4/DiscussionForumUserInterface/Pages/Shared/_UserLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Vc2VyTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/NetFullStack/source/Group4/DiscussionForumUserInterface/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/NetFullStack/source/Group4/DiscussionForumUserInterface/Pages/User/CreateDiscussion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxDcmVhdGVEaXNjdXNzaW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/NetFullStack/source/Group4/DiscussionForumUserInterface/Pages/User/Discussion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxEaXNjdXNzaW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/NetFullStack/source/Group4/DiscussionForumUserInterface/Pages/User/Discussions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxEaXNjdXNzaW9ucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/NetFullStack/source/Group4/DiscussionForumUserInterface/Pages/User/UpdateDiscussion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxVcGRhdGVEaXNjdXNzaW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/NetFullStack/source/Group4/DiscussionForumUserInterface/Pages/User/UpdateDiscussionAnswer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxVcGRhdGVEaXNjdXNzaW9uQW5zd2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/NetFullStack/source/Group4/DiscussionForumUserInterface/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/NetFullStack/source/Group4/DiscussionForumUserInterface/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/NetFullStack/source/Group4/DiscussionForumUserInterface/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-c5fl1yfkow

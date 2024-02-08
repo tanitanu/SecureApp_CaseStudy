@@ -1,0 +1,43 @@
+﻿@page
+@model BlazorCARS.HealthShield.WebApp.Pages.User.DependantListModel
+@{
+    ViewData["Title"] = "Dependant List";
+}
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">@ViewData["Title"]</h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-page="AddDependant" class="btn btn-primary"><i class="bi bi-person-plus-fill"></i>&nbsp;New Dependant</a>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Contact</th>
+            <th>Date of Birth</th>
+            <th>Relationship</th>
+            <th colspan="4">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.RecipientList)
+        {
+            <tr>
+                <td>@string.Concat(item.FirstName, " ", item.LastName)</td>
+                <td>@item.PrimaryContact</td>
+                <td>@item.DOB.ToString("dd-MMM-yyyy")</td>
+                <td>@item.RelationshipType</td>
+                @* <td><a asp-page="AddDependant?m=view" asp-route-id="@item.RecipientId" title="View"><i class="bi bi-binoculars-fill"></i></a></td> *@
+                <td><a asp-page="/User/EditDependant" asp-route-id="@item.RecipientId" title="Edit"><i class="bi bi-pencil-fill"></i></a></td>
+                <td><a asp-page="/User/VaccineRegister" asp-route-id="@item.RecipientId" title="Book Vaccination"><i class="bi bi-bookmarks-fill"></i></a></td>
+                <td><a asp-page="Vaccine/DownloadCertificate1" title="Download Certification"><i class="bi bi-file-earmark-arrow-down-fill"></i></a></td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,121 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = BlazorCARS.HealthShield.WebApp
+build_property.RootNamespace = BlazorCARS.HealthShield.WebApp
+build_property.ProjectDir = C:\Users\tmajumder2\Downloads\Tanisha_casestudy\source\Group12\src\BlazorCARS.HealthShield.WebApp\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\tmajumder2\Downloads\Tanisha_casestudy\source\Group12\src\BlazorCARS.HealthShield.WebApp
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/tmajumder2/Downloads/Tanisha_casestudy/source/Group12/src/BlazorCARS.HealthShield.WebApp/Pages/Admin/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRGFzaGJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tmajumder2/Downloads/Tanisha_casestudy/source/Group12/src/BlazorCARS.HealthShield.WebApp/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tmajumder2/Downloads/Tanisha_casestudy/source/Group12/src/BlazorCARS.HealthShield.WebApp/Pages/HospitalAppointment/Active.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9zcGl0YWxBcHBvaW50bWVudFxBY3RpdmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tmajumder2/Downloads/Tanisha_casestudy/source/Group12/src/BlazorCARS.HealthShield.WebApp/Pages/Hospital/EditHospital.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9zcGl0YWxcRWRpdEhvc3BpdGFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tmajumder2/Downloads/Tanisha_casestudy/source/Group12/src/BlazorCARS.HealthShield.WebApp/Pages/Hospital/HospitalRegistration.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9zcGl0YWxcSG9zcGl0YWxSZWdpc3RyYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tmajumder2/Downloads/Tanisha_casestudy/source/Group12/src/BlazorCARS.HealthShield.WebApp/Pages/Hospital/ViewHospital.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9zcGl0YWxcVmlld0hvc3BpdGFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tmajumder2/Downloads/Tanisha_casestudy/source/Group12/src/BlazorCARS.HealthShield.WebApp/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tmajumder2/Downloads/Tanisha_casestudy/source/Group12/src/BlazorCARS.HealthShield.WebApp/Pages/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tmajumder2/Downloads/Tanisha_casestudy/source/Group12/src/BlazorCARS.HealthShield.WebApp/Pages/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tmajumder2/Downloads/Tanisha_casestudy/source/Group12/src/BlazorCARS.HealthShield.WebApp/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tmajumder2/Downloads/Tanisha_casestudy/source/Group12/src/BlazorCARS.HealthShield.WebApp/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tmajumder2/Downloads/Tanisha_casestudy/source/Group12/src/BlazorCARS.HealthShield.WebApp/Pages/UserRole/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclJvbGVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tmajumder2/Downloads/Tanisha_casestudy/source/Group12/src/BlazorCARS.HealthShield.WebApp/Pages/User/ActiveAppointments.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxBY3RpdmVBcHBvaW50bWVudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tmajumder2/Downloads/Tanisha_casestudy/source/Group12/src/BlazorCARS.HealthShield.WebApp/Pages/User/AddDependant.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxBZGREZXBlbmRhbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tmajumder2/Downloads/Tanisha_casestudy/source/Group12/src/BlazorCARS.HealthShield.WebApp/Pages/User/DependantList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxEZXBlbmRhbnRMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tmajumder2/Downloads/Tanisha_casestudy/source/Group12/src/BlazorCARS.HealthShield.WebApp/Pages/User/EditDependant.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxFZGl0RGVwZW5kYW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tmajumder2/Downloads/Tanisha_casestudy/source/Group12/src/BlazorCARS.HealthShield.WebApp/Pages/User/EditProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxFZGl0UHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tmajumder2/Downloads/Tanisha_casestudy/source/Group12/src/BlazorCARS.HealthShield.WebApp/Pages/User/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tmajumder2/Downloads/Tanisha_casestudy/source/Group12/src/BlazorCARS.HealthShield.WebApp/Pages/User/UserRegistration.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxVc2VyUmVnaXN0cmF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tmajumder2/Downloads/Tanisha_casestudy/source/Group12/src/BlazorCARS.HealthShield.WebApp/Pages/User/VaccineRegister.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxWYWNjaW5lUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tmajumder2/Downloads/Tanisha_casestudy/source/Group12/src/BlazorCARS.HealthShield.WebApp/Pages/User/ViewProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxWaWV3UHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tmajumder2/Downloads/Tanisha_casestudy/source/Group12/src/BlazorCARS.HealthShield.WebApp/Pages/Vaccine/AddVaccine.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmFjY2luZVxBZGRWYWNjaW5lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tmajumder2/Downloads/Tanisha_casestudy/source/Group12/src/BlazorCARS.HealthShield.WebApp/Pages/Vaccine/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmFjY2luZVxMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tmajumder2/Downloads/Tanisha_casestudy/source/Group12/src/BlazorCARS.HealthShield.WebApp/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tmajumder2/Downloads/Tanisha_casestudy/source/Group12/src/BlazorCARS.HealthShield.WebApp/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tmajumder2/Downloads/Tanisha_casestudy/source/Group12/src/BlazorCARS.HealthShield.WebApp/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-i94kfk3cjf

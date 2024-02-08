@@ -1,0 +1,177 @@
+﻿@page "/createmeeting"
+@using MeetingScheduler.Entities;
+@using MeetingScheduler.Authentication;
+@using MeetingScheduler.Data;
+@using Syncfusion.Blazor.Calendars;
+@using Utilities;
+@inject IMeetingService meetingService
+@inject ILocalStorage LocalStorage
+@inject AuthenticationStateProvider AuthenticationStateProviders
+
+<div>
+    @if (!error)
+    {
+        <div class="col-12 row" style="text-align:left; font-weight:bold;color:red">
+            <span class="col-12">@messsage</span>
+        </div>
+    }
+    else
+    {
+        <div class="col-12 row" style="text-align:left; font-weight:bold;color:green">
+            <span class="col-12">@messsage</span>
+        </div>
+    }
+</div>
+
+    <legend class="float-none w-auto"></legend>
+    <EditForm Model="@createMeeting">
+                <DataAnnotationsValidator />
+    <div class="row" style="padding-left:50px;color:darkorange;font-weight: bold;font-size:25px">Create New Meeting</div>
+    <hr class="hr">
+    <div class="row">
+        <div class="col-md-2">
+            <label for="Users" class="control-label">Title</label>
+        </div>
+        <div class="col-md-8">
+            <input placeholder="Please enter title" type="Title" class="form-control"
+                       id="Title" autocomplete="off" @bind="createMeeting.Subject" />
+                <ValidationMessage For="@(() => createMeeting.Subject)" />
+        </div>
+    </div>
+
+    <div class="row" style="padding-top:10px">
+        <div class="col-md-2">
+                <label asp-for="EmailId" class="control-label">Email Address</label>
+        </div>
+            <div class="col-md-8">
+                <input placeholder="Please enter email Address" type="text" class="form-control"
+                       id="EmailIds" autocomplete="off" @bind="createMeeting.emailAddresses" />
+                <ValidationMessage For="@(() => createMeeting.emailAddresses)" />
+            </div>
+    </div>
+
+        <div class="row" style="padding-top:10px">
+            <div class="col-md-2">
+                <label asp-for="Location" class="control-label">Location</label>
+            </div>
+            <div class="col-md-8">
+                <input placeholder="Please enter location" type="Location" class="form-control"
+                       id="Location" autocomplete="off" @bind="createMeeting.Location" />
+            </div>
+        </div>
+
+        <div class="row" style="padding-top:10px">
+            <div class="col-md-2">
+                <label asp-for="StartTime" class="control-label">Start Time</label>
+            </div>
+            <div class="col-md-4">
+            <SfDateTimePicker @bind-Value="createMeeting.StartTime" Min='@MinDateTime'></SfDateTimePicker>
+                <ValidationMessage For="@(() => createMeeting.StartTime)" />
+            </div>
+        </div>
+
+        <div class="row" style="padding-top:10px">
+            <div class="col-md-2">
+                <label asp-for="EndTime" class="control-label">End Time</label>
+            </div>
+            <div class="col-md-4">
+            <SfDateTimePicker @bind-Value="createMeeting.EndTime" Min='@MinDateTime'></SfDateTimePicker>
+                <ValidationMessage For="@(() => createMeeting.EndTime)" />
+            </div>
+        </div>
+    <div class="row" style="padding-top:10px">
+        <div class="col-md-2">
+            <label asp-for="EndTime" class="control-label">All Day</label>
+        </div>
+        <div class="col-md-4">
+            <SfCheckBox Label="AllDay" @bind-Checked="@(createMeeting.IsAllDay)"></SfCheckBox>           
+        </div>
+    </div>
+
+        <div class="row" style="padding-top:10px">
+            <div class="col-md-2">
+                <label asp-for="EndTime" class="control-label">Description</label>
+            </div>
+            <div class="col-md-8">
+                <input placeholder="Please enter description" type="From" class="form-control"
+                       id="From" autocomplete="off" @bind="createMeeting.Description" />
+            </div>
+        </div>
+        <div class="row" style="padding-top:10px">
+            <div class="col-md-2">               
+            </div>
+            <div class="col-md-4">
+                <button type="submit" class="btn btn-primary btn-block createbtn" 
+                @onclick="CreateNewMeeting">
+                    Create New Meeting
+                </button>
+            </div>
+        </div>            
+    </EditForm>
+
+
+ 
+@code {
+
+    private MeetingDTO createMeeting;
+    public string messsage { get; set; }
+    private bool error = false;
+    public string? userId;
+    public string userName;
+    public DateTime MinDateTime { get; set; } = DateTime.Now;
+
+    /// <summary>
+    /// Create new meeting
+    /// </summary>
+    private void CreateNewMeeting()
+    {
+
+        MeetingDTO meetingDetails = new MeetingDTO();
+        meetingDetails.Subject = createMeeting.Subject;
+        meetingDetails.StartTime = createMeeting.StartTime;
+        meetingDetails.EndTime = createMeeting.EndTime;
+        meetingDetails.IsAllDay = createMeeting.IsAllDay;
+        meetingDetails.Description = createMeeting.Description;
+        meetingDetails.Location = createMeeting.Location;
+        meetingDetails.emailAddresses = createMeeting.emailAddresses;
+        meetingDetails.MeetingCreatedUserId = !string.IsNullOrWhiteSpace(userId) ? Convert.ToInt32(userId) : 0;
+        meetingDetails.LastUpdatedUserId = userName;
+        var response = meetingService.CreateNewMeeting(meetingDetails);
+
+
+        if (response.IsSuccess)
+        {
+            messsage = response.Message;
+            error = true;
+        }
+        else
+        {
+            messsage = response.Message;
+        }
+    }
+
+    //// <summary>
+    /// On Initialized Async
+    /// </summary>
+    /// <returns></returns>
+    protected async override Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();  
+        createMeeting = new MeetingDTO();
+        userId = await LocalStorage.GetStringAsync("userId");       
+        userName = await LocalStorage.GetStringAsync("username");
+    }
+
+}
+<style>
+    #verify {
+        position: fixed;
+        padding: 0 20px;
+    }
+
+    #right-button {
+        padding: 0 10px;
+    }
+</style>
+
+

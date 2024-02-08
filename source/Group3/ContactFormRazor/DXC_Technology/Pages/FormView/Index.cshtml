@@ -1,0 +1,45 @@
+﻿@page
+@model DXC_Technology.Pages.FormView.IndexModel
+@{
+}
+<!--Developed By Bharathi and Dhanalakshmi-->
+<partial name="_Notifications" />
+
+<form method="post">
+    <div class="border p-3 mt-4" style="width:600px">
+        <div class="row pb-2" >
+            <h2 class="text-primary pl-3">User Contact Form</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label asp-for="formView.UserName"></label>
+            <input type="text" name="formView.UserName" style="width:350px" class="form-control" />
+            <span asp-validation-for="formView.UserName" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="formView.Email"></label>
+            <input type="email" name="formView.Email" style="width:350px" class="form-control" />
+            <span asp-validation-for="formView.Email"   class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="formView.Subject"></label>
+            <input type="text" name="formView.Subject" style="width:350px" class="form-control" />
+        </div>
+        
+            <tr>
+            <label for="title">Message(Max Length 1000 Char)</label>
+                
+                <td><textarea cols="65" rows="5" name="formView.Message"></textarea></td>
+                <span asp-validation-for="formView.Message" class="text-danger"></span>
+            </tr>
+                     
+        <button type="submit" class="btn btn-primary" style="width:150px";">Submit</button>
+    </div>
+</form>
+
+@section Scripts{
+    @{
+    <partial name="_ValidationScriptsPartial" />
+}
+}
+
